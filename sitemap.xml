@@ -3,7 +3,7 @@
 
     
     <url>
-     <loc>https://nuwro.github.io/wiki/</loc>
+     <loc>https://nuwro.github.io/user-guide/</loc>
      <lastmod>2017-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -12,41 +12,19 @@
     
         
     <url>
-     <loc>https://nuwro.github.io/wiki/getting-started/installation/</loc>
+     <loc>https://nuwro.github.io/user-guide/getting-started/installation/</loc>
      <lastmod>2017-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://nuwro.github.io/wiki/getting-started/running/</loc>
+     <loc>https://nuwro.github.io/user-guide/getting-started/running/</loc>
      <lastmod>2017-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://nuwro.github.io/wiki/getting-started/parameters/</loc>
-     <lastmod>2017-04-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://nuwro.github.io/wiki/analyze-output/basics/</loc>
-     <lastmod>2017-04-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://nuwro.github.io/wiki/analyze-output/interactive/</loc>
-     <lastmod>2017-04-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://nuwro.github.io/wiki/analyze-output/macros/</loc>
+     <loc>https://nuwro.github.io/user-guide/getting-started/parameters/</loc>
      <lastmod>2017-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -54,8 +32,30 @@
     
 
     
+        
     <url>
-     <loc>https://nuwro.github.io/wiki/references/</loc>
+     <loc>https://nuwro.github.io/user-guide/analyze-output/basics/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://nuwro.github.io/user-guide/analyze-output/interactive/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://nuwro.github.io/user-guide/analyze-output/macros/</loc>
+     <lastmod>2017-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>https://nuwro.github.io/user-guide/references/</loc>
      <lastmod>2017-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>

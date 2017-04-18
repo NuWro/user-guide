@@ -1,0 +1,48 @@
+# Website structure
+pages:
+    - About: index.md
+
+    - Getting started:
+        - Installation: getting-started/installation.md
+        - Running NuWro: getting-started/running.md
+        - Parameters list: getting-started/parameters.md
+        
+    - Analyze an output:
+        - Basics: analyze-output/basics.md
+        - Interactive mode: analyze-output/interactive.md
+        - ROOT macros: analyze-output/macros.md
+        
+    - References: references.md
+
+# Project information
+site_name: 'NuWro User Guide'
+site_description: 'NuWro Monte Carlo neutrino event generator documentation '
+site_author: 'NuWro Collaboration'
+site_url: 'https://nuwro.github.io/wiki'
+
+# Repository
+repo_name: 'NuWro'
+repo_url: 'https://github.com/nuwro/nuwro'
+
+# Theme
+theme: material
+
+#  Options
+extra:
+  logo: 'img/nuwro_logo.svg'
+  palette:
+    primary: 'blue grey'
+    accent: 'blue'
+  social:
+    - type: 'github'
+      link: 'https://github.com/nuwro'
+
+# Extensions
+markdown_extensions:
+    - pymdownx.arithmatex
+    - admonition
+    - codehilite
+    - toc(permalink=true)
+
+extra_javascript:
+    - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

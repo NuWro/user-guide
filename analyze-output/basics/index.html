@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="NuWro Monte Carlo neutrino event generator documentation ">
+      
+      
+        <link rel="canonical" href="https://nuwro.github.io/wiki/analyze-output/basics/">
+      
+      
+        <meta name="author" content="NuWro Collaboration">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+    
+    
+      
+        <title>Basics - NuWro User Guide</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://nuwro.github.io/wiki" title="NuWro User Guide" class="md-logo md-header-nav__button">
+            <img src="../../img/nuwro_logo.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Analyze an output
+                </span>
+              
+            
+            Basics
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/nuwro/nuwro" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      NuWro
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/nuwro_logo.svg">
+      </i>
+    
+    NuWro User Guide
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/nuwro/nuwro" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      NuWro
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/running/" title="Running NuWro" class="md-nav__link">
+      Running NuWro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/parameters/" title="Parameters list" class="md-nav__link">
+      Parameters list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Analyze an output
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Analyze an output
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Basics
+      </label>
+    
+    <a href="./" title="Basics" class="md-nav__link md-nav__link--active">
+      Basics
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#event" title="Event" class="md-nav__link">
+    Event
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags" title="Flags" class="md-nav__link">
+    Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectors-of-particles" title="Vectors of particles" class="md-nav__link">
+    Vectors of particles
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#particles-multiplicities" title="Particles multiplicities" class="md-nav__link">
+    Particles multiplicities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinematics" title="Kinematics" class="md-nav__link">
+    Kinematics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-state-interactions" title="Final state interactions" class="md-nav__link">
+    Final state interactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation-settings" title="Simulation settings" class="md-nav__link">
+    Simulation settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particle" title="Particle" class="md-nav__link">
+    Particle
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selected-methods" title="Selected methods" class="md-nav__link">
+    Selected methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-variables" title="Selected variables" class="md-nav__link">
+    Selected variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectors" title="Vectors" class="md-nav__link">
+    Vectors
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../interactive/" title="Interactive mode" class="md-nav__link">
+      Interactive mode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../macros/" title="ROOT macros" class="md-nav__link">
+      ROOT macros
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../references/" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#event" title="Event" class="md-nav__link">
+    Event
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags" title="Flags" class="md-nav__link">
+    Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectors-of-particles" title="Vectors of particles" class="md-nav__link">
+    Vectors of particles
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#particles-multiplicities" title="Particles multiplicities" class="md-nav__link">
+    Particles multiplicities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinematics" title="Kinematics" class="md-nav__link">
+    Kinematics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-state-interactions" title="Final state interactions" class="md-nav__link">
+    Final state interactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation-settings" title="Simulation settings" class="md-nav__link">
+    Simulation settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particle" title="Particle" class="md-nav__link">
+    Particle
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selected-methods" title="Selected methods" class="md-nav__link">
+    Selected methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-variables" title="Selected variables" class="md-nav__link">
+    Selected variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectors" title="Vectors" class="md-nav__link">
+    Vectors
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Basics</h1>
+                
+                <div class="admonition attention">
+<p>Work in progress. Meanwhile, you can find more information in the
+<a href="http://www.ift.uni.wroc.pl/%7Etgolan/talks/NuWro_howto.pdf">tutorial</a>.</p>
+</div>
+<h2 id="event">Event<a class="headerlink" href="#event" title="Permanent link">&para;</a></h2>
+<p>Generated events are represented by objects of <code>class event : public TObject</code>.
+They are saved in an output <em>ROOT</em> file under a <em>TTree</em> named <strong>"treeout"</strong>.
+Each <code>event</code> object stores all information about a single neutrino scattering process.</p>
+<p>This section describes informations you can extract from an <code>event</code> object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>class event : public TObject</code> provides many useful public variables and methods
+to use when analyze a ROOT output file.
+This section describes some of them. For the full list please refer to
+<code>nuwro/src/event1.h</code>.</p>
+</div>
+<h3 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h3>
+<p><code>event.flag</code> stores the structure of the following flags:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Flag</th>
+<th align="left">True for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>qel</code></td>
+<td align="left">(quasi-)elastic event</td>
+</tr>
+<tr>
+<td align="left"><code>res</code></td>
+<td align="left">pion production event through resonance excitation</td>
+</tr>
+<tr>
+<td align="left"><code>dis</code></td>
+<td align="left">deep inelastic scattering event</td>
+</tr>
+<tr>
+<td align="left"><code>mec</code></td>
+<td align="left">two-body current event</td>
+</tr>
+<tr>
+<td align="left"><code>nc</code></td>
+<td align="left">neutral current event</td>
+</tr>
+<tr>
+<td align="left"><code>cc</code></td>
+<td align="left">charged current event</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p>Please note that RES channel is mainly pion production through
+Delta resonance, however, in general it is defined as inelastic
+events with invariant mass below 1.6 GeV. Everything above that
+value is marked as DIS channel.</p>
+</div>
+<h3 id="vectors-of-particles">Vectors of particles<a class="headerlink" href="#vectors-of-particles" title="Permanent link">&para;</a></h3>
+<p>There are three main <code>std::vectors</code> of particles:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Vector</th>
+<th align="left">Stores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>in</code></td>
+<td align="left">initial state particles in primary vertex</td>
+</tr>
+<tr>
+<td align="left"><code>out</code></td>
+<td align="left">final state particles in primary vertex</td>
+</tr>
+<tr>
+<td align="left"><code>post</code></td>
+<td align="left">final state particles after final state interactions</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The convention is that a lepton is always first particle in a vector, so:</p>
+<ul>
+<li><code>in[0]</code> - incoming neutrino</li>
+<li><code>out[0]</code> - outgoing neutrino / charged lepton</li>
+</ul>
+</div>
+<p>More information about <code>particle</code> class can be found in <a href="#particle">particle section</a>.</p>
+<h4 id="particles-multiplicities">Particles multiplicities<a class="headerlink" href="#particles-multiplicities" title="Permanent link">&para;</a></h4>
+<p>Although one can grab particles multiplicities directly from vectors,
+there are several methods to make it easier:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Returns the number of final state particles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>int n();</code></td>
+<td align="left">after primary vertex</td>
+</tr>
+<tr>
+<td align="left"><code>int f();</code></td>
+<td align="left">after final state interactions</td>
+</tr>
+<tr>
+<td align="left"><code>int nof(int pdg);</code></td>
+<td align="left">after primary vertex given by the PDG code</td>
+</tr>
+<tr>
+<td align="left"><code>int fof(int pdg);</code></td>
+<td align="left">after final state interactions given by the PDG code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kinematics">Kinematics<a class="headerlink" href="#kinematics" title="Permanent link">&para;</a></h3>
+<p>There are only few kinematics methods for an event
+(see <a href="#particle">particle section</a> for more):</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>vect q();</code></td>
+<td align="left">four-momentum transfer (more on <a href="#vectors">vect class</a>)</td>
+</tr>
+<tr>
+<td align="left"><code>double q2();</code></td>
+<td align="left">four-momentum transfer squared</td>
+</tr>
+<tr>
+<td align="left"><code>double W</code>();`</td>
+<td align="left">invariant mass</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p>Please note default NuWro units is MeV.</p>
+</div>
+<h3 id="final-state-interactions">Final state interactions<a class="headerlink" href="#final-state-interactions" title="Permanent link">&para;</a></h3>
+<p>The following methods return the number of specific interaction type,
+happened during final state interactions:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Returns the number of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>int number_of_nucleon_elastic();</code></td>
+<td align="left">nucleon elastic</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_nucleon_spp();</code></td>
+<td align="left">nucleon single pion production</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_nucleon_dpp();</code></td>
+<td align="left">nucleon double pion production</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_pion_elastic();</code></td>
+<td align="left">pion elastic</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_pion_ce();</code></td>
+<td align="left">pion charge exchange</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_pion_spp();</code></td>
+<td align="left">pion single pion production</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_pion_dpp();</code></td>
+<td align="left">pion double pion production</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_pion_tpp();</code></td>
+<td align="left">pion triple pion production</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_pion_abs();</code></td>
+<td align="left">pion absorption</td>
+</tr>
+<tr>
+<td align="left"><code>int number_of_interactions();</code></td>
+<td align="left">the sum of above</td>
+</tr>
+</tbody>
+</table>
+<h3 id="simulation-settings">Simulation settings<a class="headerlink" href="#simulation-settings" title="Permanent link">&para;</a></h3>
+<p><code>event.par</code> stores the copy of parameters used for a simulation.
+Please note, that some values may be different from event to event
+(e.g. target nucleus for detector simulations).</p>
+<h2 id="particle">Particle<a class="headerlink" href="#particle" title="Permanent link">&para;</a></h2>
+<p>Events keep information about initial and final states particles
+in <code>std::vector &lt;particle&gt;</code> (as described <a href="#vectors-of-particles">here</a>).
+Usually, one has to loop over these vectors to extract information about
+final state particles.</p>
+<p>This section describes informations you can find in a <code>particle</code> class object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>class particle : public vect</code> provides many useful public variables and methods
+to use when analyze a ROOT output file.
+This section describes some of them. For the full list please refer to
+<code>nuwro/src/particle.h</code>.</p>
+</div>
+<h3 id="selected-methods">Selected methods<a class="headerlink" href="#selected-methods" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>double E();</code></td>
+<td align="left">total energy</td>
+</tr>
+<tr>
+<td align="left"><code>double energy();</code></td>
+<td align="left">total energy</td>
+</tr>
+<tr>
+<td align="left"><code>double Ek();</code></td>
+<td align="left">kinetic energy</td>
+</tr>
+<tr>
+<td align="left"><code>double m();</code></td>
+<td align="left">mass</td>
+</tr>
+<tr>
+<td align="left"><code>double mass();</code></td>
+<td align="left">mass</td>
+</tr>
+<tr>
+<td align="left"><code>double mass2();</code></td>
+<td align="left">mass squared</td>
+</tr>
+<tr>
+<td align="left"><code>double momentum();</code></td>
+<td align="left">value of the momentum</td>
+</tr>
+<tr>
+<td align="left"><code>double momentum2();</code></td>
+<td align="left">momentum squared</td>
+</tr>
+<tr>
+<td align="left"><code>vec p();</code></td>
+<td align="left">momentum as a 3-vector</td>
+</tr>
+<tr>
+<td align="left"><code>vect&amp; p4();</code></td>
+<td align="left">four-momentum</td>
+</tr>
+<tr>
+<td align="left"><code>bool lepton();</code></td>
+<td align="left">true if lepton</td>
+</tr>
+<tr>
+<td align="left"><code>bool pion();</code></td>
+<td align="left">true if pion</td>
+</tr>
+<tr>
+<td align="left"><code>bool nucleon();</code></td>
+<td align="left">true if nucleon</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p>Please note default NuWro units is MeV.</p>
+</div>
+<h3 id="selected-variables">Selected variables<a class="headerlink" href="#selected-variables" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>int pdg;</code></td>
+<td align="left">PDG code</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vectors">Vectors<a class="headerlink" href="#vectors" title="Permanent link">&para;</a></h2>
+<p>There are two classes for handling vectors:</p>
+<ul>
+<li><code>class vec</code>: 3-vectors (x, y, z)</li>
+<li><code>class vect</code>: 4-vectors (t, x, y, z)</li>
+</ul>
+<p>They both overload all reasonable operators, so vectors algebra is straightforward.</p>
+<p>Not much to say about it - they are vectors. If you feel like reading more on that
+please see <code>nuwro/src/vec.h</code> and <code>nuwro/src/vect.h</code>.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../getting-started/parameters/" title="Parameters list" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Parameters list
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../interactive/" title="Interactive mode" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Interactive mode
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/nuwro" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

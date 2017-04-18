@@ -1,0 +1,1535 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="NuWro Monte Carlo neutrino event generator documentation ">
+      
+      
+        <link rel="canonical" href="https://nuwro.github.io/wiki/getting-started/parameters/">
+      
+      
+        <meta name="author" content="NuWro Collaboration">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+    
+    
+      
+        <title>Parameters list - NuWro User Guide</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://nuwro.github.io/wiki" title="NuWro User Guide" class="md-logo md-header-nav__button">
+            <img src="../../img/nuwro_logo.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Getting started
+                </span>
+              
+            
+            Parameters list
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/nuwro/nuwro" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      NuWro
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/nuwro_logo.svg">
+      </i>
+    
+    NuWro User Guide
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/nuwro/nuwro" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      NuWro
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../running/" title="Running NuWro" class="md-nav__link">
+      Running NuWro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Parameters list
+      </label>
+    
+    <a href="./" title="Parameters list" class="md-nav__link md-nav__link--active">
+      Parameters list
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-settings" title="General settings" class="md-nav__link">
+    General settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beam-settings" title="Beam settings" class="md-nav__link">
+    Beam settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-energy-profile-for-a-single-flavor-beam" title="Defining energy profile for a single flavor beam" class="md-nav__link">
+    Defining energy profile for a single flavor beam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-energy-profile-for-a-mixed-flavor-beam" title="Defining energy profile for a mixed flavor beam" class="md-nav__link">
+    Defining energy profile for a mixed flavor beam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predefined-beams" title="Predefined beams" class="md-nav__link">
+    Predefined beams
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-settings" title="Target settings" class="md-nav__link">
+    Target settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-single-nucleus-target" title="Defining a single nucleus target" class="md-nav__link">
+    Defining a single nucleus target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-composed-target" title="Defining a composed target" class="md-nav__link">
+    Defining a composed target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predefined-targets" title="Predefined targets" class="md-nav__link">
+    Predefined targets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactions-settings" title="Interactions settings" class="md-nav__link">
+    Interactions settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quasi-elastic" title="Quasi-elastic" class="md-nav__link">
+    Quasi-elastic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pion-production" title="Pion production" class="md-nav__link">
+    Pion production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-body-current" title="Two-body current" class="md-nav__link">
+    Two-body current
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-state-interactions" title="Final state interactions" class="md-nav__link">
+    Final state interactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formation-zone-models" title="Formation zone models" class="md-nav__link">
+    Formation zone models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Analyze an output
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Analyze an output
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analyze-output/basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analyze-output/interactive/" title="Interactive mode" class="md-nav__link">
+      Interactive mode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analyze-output/macros/" title="ROOT macros" class="md-nav__link">
+      ROOT macros
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../references/" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-settings" title="General settings" class="md-nav__link">
+    General settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beam-settings" title="Beam settings" class="md-nav__link">
+    Beam settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-energy-profile-for-a-single-flavor-beam" title="Defining energy profile for a single flavor beam" class="md-nav__link">
+    Defining energy profile for a single flavor beam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-energy-profile-for-a-mixed-flavor-beam" title="Defining energy profile for a mixed flavor beam" class="md-nav__link">
+    Defining energy profile for a mixed flavor beam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predefined-beams" title="Predefined beams" class="md-nav__link">
+    Predefined beams
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-settings" title="Target settings" class="md-nav__link">
+    Target settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-single-nucleus-target" title="Defining a single nucleus target" class="md-nav__link">
+    Defining a single nucleus target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-composed-target" title="Defining a composed target" class="md-nav__link">
+    Defining a composed target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predefined-targets" title="Predefined targets" class="md-nav__link">
+    Predefined targets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactions-settings" title="Interactions settings" class="md-nav__link">
+    Interactions settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quasi-elastic" title="Quasi-elastic" class="md-nav__link">
+    Quasi-elastic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pion-production" title="Pion production" class="md-nav__link">
+    Pion production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-body-current" title="Two-body current" class="md-nav__link">
+    Two-body current
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-state-interactions" title="Final state interactions" class="md-nav__link">
+    Final state interactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formation-zone-models" title="Formation zone models" class="md-nav__link">
+    Formation zone models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Parameters list</h1>
+                
+                <p>NuWro uses by default settings from the <code>params.txt</code> file located in <code>$PWD</code> directory.
+If the file does not exist, the one from <code>nuwro/data</code> folder is loaded.
+If both files are missing or some of the parameters are not set in the file,
+default values are used. </p>
+<h2 id="general-settings">General settings<a class="headerlink" href="#general-settings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter name</th>
+<th align="center">Possible arguments</th>
+<th align="center">Default value</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">number_of_events</td>
+<td align="center">positive integer</td>
+<td align="center">1e5</td>
+<td align="center">The number of equally weighted events to be saved in the output ROOT file</td>
+</tr>
+<tr>
+<td align="center">number_of_test_events</td>
+<td align="center">positive integer</td>
+<td align="center">1e6</td>
+<td align="center">The number of events used to calculate cross sections (not saved by default)</td>
+</tr>
+<tr>
+<td align="center">user_events</td>
+<td align="center">0, 1</td>
+<td align="center">0</td>
+<td align="center">Used to turn on the fitting procedure:<br>0 - Run NuWro<br>1 - Fit axial mass to MiniBooNE data for CCQE</td>
+</tr>
+<tr>
+<td align="center">user_params <br> <em>(for user_events 1)</em></td>
+<td align="center">x y z</td>
+<td align="center">-</td>
+<td align="center">Parameters for the axial mass extraction procedure:<br>x - the minimum axial mass value<br>y - the maximum axial mass value<br>z - the axial mass step</td>
+</tr>
+<tr>
+<td align="center">random_seed</td>
+<td align="center">positive integer</td>
+<td align="center">0</td>
+<td align="center">Controls the random seed persistence:<br>0 - use time(NULL) as a seed for the random number generator<br>1 - read state from “random seed” file or use seed=time(NULL), if the file was not found<br>n - use n as the seed for the random number generator</td>
+</tr>
+<tr>
+<td align="center">mixed_order</td>
+<td align="center">0, 1</td>
+<td align="center">0</td>
+<td align="center">If 1, events are saved to the output file in random order</td>
+</tr>
+<tr>
+<td align="center">save_test_events</td>
+<td align="center">0-2</td>
+<td align="center">0</td>
+<td align="center">Turn on to use test events in the analysis:<br>0 - test events are not saved<br>1 - test events are finalized and stored in weight.eventsout.root file, the average weight is equal to the total cross section<br>2 - test events of nonzero weights are finalized and stored in weight.eventsout.root file, the weights are respectively scaled, so the average weight is equal to the total cross section</td>
+</tr>
+</tbody>
+</table>
+<h2 id="beam-settings">Beam settings<a class="headerlink" href="#beam-settings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter name</th>
+<th align="center">Possible arguments</th>
+<th align="center">Default value</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">beam_direction</td>
+<td align="center">x y z</td>
+<td align="center">0 0 1</td>
+<td align="center">The direction of the neutrino momentum in xyz coordinates</td>
+</tr>
+<tr>
+<td align="center">beam_type</td>
+<td align="center">0-4</td>
+<td align="center">0</td>
+<td align="center">Types of beams:<br> 0 - a single neutrino flavor beam<br>1 - a mixed flavor beam<br>2 - a beam loaded from a ROOT file<br>3 - a beam loaded from the histogram (histout.txt)<br>4 - create histout.txt file based on a ROOT file (than use beam type 3 to run NuWro)</td>
+</tr>
+<tr>
+<td align="center">beam_particle<br><em>(for beam_type 0)</em></td>
+<td align="center">+/- 12, 14, 16</td>
+<td align="center">14</td>
+<td align="center">PDG number of the incident neutrino</td>
+</tr>
+<tr>
+<td align="center">beam_energy<br><em>(for beam_type 0)</em></td>
+<td align="center"><em>explained below</em></td>
+<td align="center">1000</td>
+<td align="center">The energy profile</td>
+</tr>
+<tr>
+<td align="center">beam_content<br><em>(for beam_type 1)</em></td>
+<td align="center"><em>explained below</em></td>
+<td align="center">-</td>
+<td align="center">The mixed beam definition</td>
+</tr>
+<tr>
+<td align="center">beam_folder<br><em>(for beam_type 2, 4)</em></td>
+<td align="center"><em>path</em></td>
+<td align="center">../flux</td>
+<td align="center">The path to the directory with ROOT files</td>
+</tr>
+<tr>
+<td align="center">beam_file_first<br><em>(for beam_type 2, 4)</em></td>
+<td align="center">positive integer</td>
+<td align="center">1</td>
+<td align="center">The number of the first file in the folder to be read</td>
+</tr>
+<tr>
+<td align="center">beam_file_limit<br><em>(for beam_type 2, 4)</em></td>
+<td align="center">positive integer</td>
+<td align="center">0</td>
+<td align="center">The number of files to be loaded (0 - read files to the last one in the directory)</td>
+</tr>
+<tr>
+<td align="center">beam_offset</td>
+<td align="center">x y z</td>
+<td align="center">0 0 0</td>
+<td align="center">The offset of the position of the interaction in xyz coordinates</td>
+</tr>
+<tr>
+<td align="center">beam_placement<br><em>(in cascade mode only)</em></td>
+<td align="center">0-2</td>
+<td align="center">0</td>
+<td align="center">The starting position of the particle:<br>0 - the propagation starts at the center of the nucleus<br>1 - the propagation starts at a random place inside the nucleus<br>2 - the propagation starts just under the surface of the nucleus</td>
+</tr>
+</tbody>
+</table>
+<h3 id="defining-energy-profile-for-a-single-flavor-beam">Defining energy profile for a single flavor beam<a class="headerlink" href="#defining-energy-profile-for-a-single-flavor-beam" title="Permanent link">&para;</a></h3>
+<p>For a single flavor neutrino beam you need to set up <code>beam_type = 0</code>
+and specify neutrino PDG using <code>beam_particle = [PDG code]</code>.</p>
+<p>The energy profile is set using <code>beam_energy</code>:</p>
+<ul>
+<li>
+<p>for a mono-energetic beam use:</p>
+<div class="codehilite"><pre><span></span>beam_energy = E
+</pre></div>
+
+
+<p>where <code>E</code> is neutrino energy in MeV</p>
+</li>
+<li>
+<p>for a uniform beam with energy range from <code>E0</code> to <code>E1</code> use:</p>
+<div class="codehilite"><pre><span></span>beam_energy = E0 E1
+</pre></div>
+
+
+</li>
+<li>
+<p>for a non-uniform beam with energy range from <code>E0</code> to <code>E1</code> given by histogram
+<code>a1, a2, ..., an</code> use:</p>
+<div class="codehilite"><pre><span></span>beam_energy = E0 E1 a0 a1 ... an
+</pre></div>
+
+
+</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The histogram does not have to be normalized. The probability of finding
+neutrino energy in i-th bin is defined as follows:</p>
+<span>\[P_i = \frac{a_i}{\sum\limits_{i=0}^n a_j}\]</span></div>
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>The following code:</p>
+<div class="codehilite"><pre><span></span>beam_energy = 1000 2000 1 2 3 4
+</pre></div>
+
+
+<p>defines the following beam:</p>
+<div class="codehilite"><pre><span></span>^
+|
+|                       |-----|
+|                       |     |
+|                 |-----|     |
+|                 |     |     |
+|           |-----|     | 40% |
+|           |     | 30% |     |
+|     |-----| 20% |     |     |
+|     | 10% |     |     |     |   
+|-----|-----|-----|-----|-----|-----&gt; E [MeV]   
+    1000  1250  1500  1750  2000
+</pre></div>
+
+
+</div>
+<h3 id="defining-energy-profile-for-a-mixed-flavor-beam">Defining energy profile for a mixed flavor beam<a class="headerlink" href="#defining-energy-profile-for-a-mixed-flavor-beam" title="Permanent link">&para;</a></h3>
+<p>For a mixed flavor neutrino beam you need to set up <code>beam_type = 1</code>.</p>
+<p>Instead of using <code>beam_particle</code> and <code>beam_energy</code> you should define a beam
+with:</p>
+<div class="codehilite"><pre><span></span><span class="n">beam_content</span> <span class="o">=</span> <span class="p">[</span><span class="n">PDG</span> <span class="n">code</span><span class="p">]</span> <span class="p">[</span><span class="n">fraction</span><span class="p">]</span><span class="o">%</span> <span class="p">[</span><span class="n">beam</span> <span class="n">energy</span><span class="p">]</span>
+</pre></div>
+
+
+<p>where <code>[beam energy]</code> is defined as for a single flavor beam.</p>
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>The following code:</p>
+<div class="codehilite"><pre><span></span>beam_content = 14 80% 1000
+</pre></div>
+
+
+<p>defines mono-energetic muon neutrino beam,
+which constitutes 80% of the whole flux.</p>
+</div>
+<p>You may add as many beam contents as you want in the following way:</p>
+<div class="codehilite"><pre><span></span><span class="n">beam_content</span> <span class="o">+=</span> <span class="p">[</span><span class="n">PDG</span> <span class="n">code</span><span class="p">]</span> <span class="p">[</span><span class="n">fraction</span><span class="p">]</span><span class="o">%</span> <span class="p">[</span><span class="n">beam</span> <span class="n">energy</span><span class="p">]</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p>Please note <code>+=</code>. Using <code>=</code> would clear the previous content.</p>
+</div>
+<p>In general, a mixed flavor beam definition would look like this:</p>
+<div class="codehilite"><pre><span></span>beam_content = [PDG code 1] [fraction 1]% [beam energy 1]
+beam_content += [PDG code 2] [fraction 2]% [beam energy 2]
+beam_content += [PDG code 3] [fraction 3]% [beam energy 3]
+...
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>The following code:</p>
+<div class="codehilite"><pre><span></span>beam content = 12 75% 1000
+beam content += -12 20% 1000 2000
+beam content += 14 5% 1000 1500 1 5 10 15 5 1
+</pre></div>
+
+
+<p>defines the following beam:</p>
+<ul>
+<li>75% of mono-energetic electron neutrinos</li>
+<li>20% of electron anti-neutrinos with uniformly distributed energy</li>
+<li>5% of muon neutrinos with some energy distribution in range 1-1.5 GeV</li>
+</ul>
+</div>
+<h3 id="predefined-beams">Predefined beams<a class="headerlink" href="#predefined-beams" title="Permanent link">&para;</a></h3>
+<p>One can also use predefined beam specifications instead of the above parameters.
+The list of beams can be found in <code>nuwro/data/beam</code> directory.
+To use one of those beams, one must use the following line:</p>
+<div class="codehilite"><pre><span></span>@beam/beamfile.txt
+</pre></div>
+
+
+<p>where <code>beamfile.txt</code> is the name of the file from <code>nuwro/data/beam</code> directory.</p>
+<h2 id="target-settings">Target settings<a class="headerlink" href="#target-settings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter name</th>
+<th align="center">Possible arguments</th>
+<th align="center">Default value</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">target_type</td>
+<td align="center">0-2</td>
+<td align="center">0</td>
+<td align="center">Types of targets:<br>0 - a single nucleus<br>1 - a target composed from</td>
+</tr>
+<tr>
+<td align="center">some nuclei<br>2 - a detector geometry loaded from a ROOT file</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">nucleus_p<br><em>(for target_type 0)</em></td>
+<td align="center">positive integer</td>
+<td align="center">6</td>
+<td align="center">The number of protons in a target nucleus</td>
+</tr>
+<tr>
+<td align="center">nucleus_n<br><em>(for target_type 0)</em></td>
+<td align="center">positive integer</td>
+<td align="center">6</td>
+<td align="center">The number of neutrons in a target nucleus</td>
+</tr>
+<tr>
+<td align="center">nucleus_E_b<br><em>(for target_type 0)</em></td>
+<td align="center">positive integer</td>
+<td align="center">34</td>
+<td align="center">The binding potential (sum of binding and Fermi energies)</td>
+</tr>
+<tr>
+<td align="center">nucleus_kf<br><em>(for target_type 0)</em></td>
+<td align="center">positive integer</td>
+<td align="center">220</td>
+<td align="center">The Fermi momentum</td>
+</tr>
+<tr>
+<td align="center">nucleus_target</td>
+<td align="center">0-5</td>
+<td align="center">2</td>
+<td align="center">Nucleus models used in a primary interaction:<br>0 - free nucleon<br>1 - Fermi gas<br>2 - local Fermi gas<br> 3 - Bodek-Ritchie model<br>4 - spectral function<br>5 - deuterium</td>
+</tr>
+<tr>
+<td align="center">nucleus_model</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Nucleus density profiles for FSI:<br>0 - constant density<br>1 - realistic density profile</td>
+</tr>
+<tr>
+<td align="center">target_content<em>(for target_type 1)</em></td>
+<td align="center"><em>explained below</em></td>
+<td align="center">-</td>
+<td align="center">The composed target definition</td>
+</tr>
+<tr>
+<td align="center">geo_file<br><em>(for target_type 2)</em></td>
+<td align="center"><em>filename</em></td>
+<td align="center"><em>target/ND280v9r7p5.root</em></td>
+<td align="center">The path to the file with the detector geometry</td>
+</tr>
+<tr>
+<td align="center">geo_name<br><em>(for target_type 2)</em></td>
+<td align="center"><em>geometry name</em></td>
+<td align="center"><em>ND280Geometry v9r7p5</em></td>
+<td align="center">The name of the geometry in the file</td>
+</tr>
+<tr>
+<td align="center">geo_o<br><em>(for target_type 2)</em></td>
+<td align="center">x y z</td>
+<td align="center">0 0 0</td>
+<td align="center">The coordinates of the center of the box</td>
+</tr>
+<tr>
+<td align="center">geo_d<br><em>(for target_type 2)</em></td>
+<td align="center">x y z</td>
+<td align="center">2000 5000 2000</td>
+<td align="center">The half dimension of the box</td>
+</tr>
+<tr>
+<td align="center">geo_volumne<br><em>(for target_type 2)</em></td>
+<td align="center"><em>master volume name</em></td>
+<td align="center">-</td>
+<td align="center">The name of the <em>master volume</em> in the detector file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="defining-a-single-nucleus-target">Defining a single nucleus target<a class="headerlink" href="#defining-a-single-nucleus-target" title="Permanent link">&para;</a></h3>
+<p>In order to define a single nucleus target you need to set up <code>target_type = 0</code>.
+Then, define the number of nucleons using:</p>
+<div class="codehilite"><pre><span></span>nucleus_p = [#protons]
+nucleus_n = [#neutrons]
+</pre></div>
+
+
+<p>You may set up other nucleus properties using parameters listed in the table above.</p>
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>To define Carbon target use:</p>
+<div class="codehilite"><pre><span></span>target_type = 0
+nucleus_p = 6
+nucleus_n = 6
+</pre></div>
+
+
+</div>
+<h3 id="defining-a-composed-target">Defining a composed target<a class="headerlink" href="#defining-a-composed-target" title="Permanent link">&para;</a></h3>
+<p>In order to define a multi-nuclei target you need to set up <code>target_type = 1</code>.</p>
+<p>Instead of using <code>nucleus_p</code>, <code>nucleus_n</code> and other nucleus related parameters
+you should define your target with:</p>
+<div class="codehilite"><pre><span></span><span class="n">target_content</span> <span class="o">=</span> <span class="p">[</span><span class="err">#</span><span class="n">protons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">neutrons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">nuclei</span><span class="p">]</span><span class="n">x</span> <span class="p">[</span><span class="n">binding</span> <span class="n">energy</span><span class="p">]</span> <span class="p">[</span><span class="n">Fermi</span> <span class="n">momentum</span><span class="p">]</span> <span class="p">[</span><span class="n">nucleus</span> <span class="n">model</span><span class="p">]</span>
+</pre></div>
+
+
+<p>where only first three arguments are required.</p>
+<div class="admonition hint">
+<p>When using local Fermi gas model binding energy and Fermi momentum
+are taken from tables anyway.</p>
+</div>
+<p>You may add as many nuclei as you want in the following way:</p>
+<div class="codehilite"><pre><span></span><span class="n">target_content</span> <span class="o">+=</span> <span class="p">[</span><span class="err">#</span><span class="n">protons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">neutrons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">nuclei</span><span class="p">]</span><span class="n">x</span> <span class="p">[</span><span class="n">binding</span> <span class="n">energy</span><span class="p">]</span> <span class="p">[</span><span class="n">Fermi</span> <span class="n">momentum</span><span class="p">]</span> <span class="p">[</span><span class="n">nucleus</span> <span class="n">model</span><span class="p">]</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p>Please note <code>+=</code>. Using <code>=</code> would clear the previous content.</p>
+</div>
+<p>In general, a multi-nuclei target definition would look like this:</p>
+<div class="codehilite"><pre><span></span>target_content = [#protons 1] [#neutrons 1] [#nuclei 1]x
+target_content += [#protons 2] [#neutrons 2] [#nuclei 2]x
+target_content += [#protons 3] [#neutrons 3] [#nuclei 3]x
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>To define <span>\(C_2H_6O\)</span> use the following code:</p>
+<div class="codehilite"><pre><span></span>target_type = 1
+target content = 6 6 2x
+target content += 1 0 6x
+target content += 8 8 1x
+</pre></div>
+
+
+</div>
+<h3 id="predefined-targets">Predefined targets<a class="headerlink" href="#predefined-targets" title="Permanent link">&para;</a></h3>
+<p>One can also use predefined target specifications instead of the above parameters.
+The list of targets can be found in <code>nuwro/data/target</code> directory.
+To use one of those beams, one must use the following line:</p>
+<div class="codehilite"><pre><span></span>@target/targetfile.txt
+</pre></div>
+
+
+<p>where <code>targetfile.txt</code> is the name of the file from <code>nuwro/data/target</code> directory.</p>
+<h2 id="interactions-settings">Interactions settings<a class="headerlink" href="#interactions-settings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter name</th>
+<th align="center">Possible arguments</th>
+<th align="center">Default value</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">dyn_qel_cc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off charge current quasielastic process</td>
+</tr>
+<tr>
+<td align="center">dyn_qel_nc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off neutral current quasielastic process</td>
+</tr>
+<tr>
+<td align="center">dyn_res_cc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off charge current resonance pion production</td>
+</tr>
+<tr>
+<td align="center">dyn_res_nc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off neutral current resonance pion production</td>
+</tr>
+<tr>
+<td align="center">dyn_dis_cc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off charge current deep inelastic scattering</td>
+</tr>
+<tr>
+<td align="center">dyn_dis_nc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off neutral current deep inelastic scattering</td>
+</tr>
+<tr>
+<td align="center">dyn_coh_cc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off charge current coherent pion production</td>
+</tr>
+<tr>
+<td align="center">dyn_coh_nc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off neutral current coherent pion production</td>
+</tr>
+<tr>
+<td align="center">dyn_mec_cc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off charge current meson exchange current process</td>
+</tr>
+<tr>
+<td align="center">dyn_mec_nc</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off neutral current meson exchange current process</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quasi-elastic">Quasi-elastic<a class="headerlink" href="#quasi-elastic" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter name</th>
+<th align="center">Possible arguments</th>
+<th align="center">Default value</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">qel_vector_ff_set</td>
+<td align="center">1-6</td>
+<td align="center">2</td>
+<td align="center">Electromagnetic form factors parametrization:<br>1 - dipole form<br>2 - BBBA05 (Ref. [1])<br>3 - BBA03 (Ref. [2])<br>4 - JLab (Ref. [3])<br>5 - NN10 with two photon exchange effect (Ref. [4])</td>
+</tr>
+<tr>
+<td align="center">qel_axial_ff_set</td>
+<td align="center">1-4</td>
+<td align="center">1</td>
+<td align="center">Axial form factors parametrization:<br>1 - dipole form<br>2 - 2-fold parabolic modification<br>3 - 3-fold parabolic modification<br>4 - 4-fold parabolic modification</td>
+</tr>
+<tr>
+<td align="center">qel_strange</td>
+<td align="center">0, 1</td>
+<td align="center">0</td>
+<td align="center">Turn on/off the strange quark contribution to the NC axial form factors</td>
+</tr>
+<tr>
+<td align="center">qel_strangeEM</td>
+<td align="center">0, 1</td>
+<td align="center">0</td>
+<td align="center">Turn on/off the strange quark contribution to the NC vector form factors</td>
+</tr>
+<tr>
+<td align="center">delta_s</td>
+<td align="center">any number</td>
+<td align="center">-0.15</td>
+<td align="center">Strangeness contribution</td>
+</tr>
+<tr>
+<td align="center">qel_cc_axial_mass</td>
+<td align="center">positive number</td>
+<td align="center">1200</td>
+<td align="center">The axial mass value for charge current form factors</td>
+</tr>
+<tr>
+<td align="center">qel_nc_axial_mass</td>
+<td align="center">positive number</td>
+<td align="center">1350</td>
+<td align="center">The axial mass value for neutral current form factors</td>
+</tr>
+<tr>
+<td align="center">qel_s_axial_mass</td>
+<td align="center">positive number</td>
+<td align="center">1200</td>
+<td align="center">The axial mass value used in the dipole strange form factor</td>
+</tr>
+<tr>
+<td align="center">qel_rpa</td>
+<td align="center">0-3</td>
+<td align="center">0</td>
+<td align="center">RPA settings:<br>0 - do not use RPA<br>1 - use RPA without effective mass of nucleon<br>2 - use effective mass of nucleon without RPA (test only)<br> 3 - use RPA with effective mass of nucleon (test only)</td>
+</tr>
+<tr>
+<td align="center">flux_correction</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off flux correction</td>
+</tr>
+<tr>
+<td align="center">sf_method</td>
+<td align="center">0-3</td>
+<td align="center">0</td>
+<td align="center">Spectral function settings (for CCQE):<br>0 - do not use spectral function<br>1 - use grid spectral function (for 12C, 16O, 40Ar, 40Ca, 56Fe)<br>2 - use factorized spectral function (for 16O, 40Ar, 40Ca)</td>
+</tr>
+<tr>
+<td align="center">cc_smoothing</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">If 1, the impossible quasi-elastic reaction (like CC nu scattering off proton) are skipped</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pion-production">Pion production<a class="headerlink" href="#pion-production" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter name</th>
+<th align="center">Possible arguments</th>
+<th align="center">Default value</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">delta_FF_set</td>
+<td align="center">1-7</td>
+<td align="center">1</td>
+<td align="center">Delta production form factors:<br>1 - dipole form [5]<br>2 - Paschos and Lalakulich, 2.12 MA = 1.05GeV BNL fit (Ref. [6])<br>3 - Paschos and Lalakulich, 2.12 MA = 0.84GeV ANL fit (Ref. [6])<br>4 - Paschos and Lalakulich, page 4, bottom right (Ref. [6])<br>5 - Paschos and Lalakulich, page 5, top left (Ref. [6])<br>6 - Eq. 13 from Ref. [7]<br>7 - based on chiral quark model from Ref. [8]</td>
+</tr>
+<tr>
+<td align="center">pion_axial_mass<br><em>(for delta_FF_set 1)</em></td>
+<td align="center">positive number</td>
+<td align="center">0.94</td>
+<td align="center">The axial mass value used in dipole parametrization of the resonance pion production form factor</td>
+</tr>
+<tr>
+<td align="center">pion_C5A<br><em>(for delta_FF_set 1)</em></td>
+<td align="center">positive number</td>
+<td align="center">1.19</td>
+<td align="center">The C5A value used in dipole parametrization of the resonance pion production form factor</td>
+</tr>
+<tr>
+<td align="center">spp_precision</td>
+<td align="center">positive number</td>
+<td align="center">500</td>
+<td align="center">Controls the precision in RESDIS boundary region; should not be changed</td>
+</tr>
+<tr>
+<td align="center">red_dis_cut</td>
+<td align="center">positive number</td>
+<td align="center">1600</td>
+<td align="center">Boundary of RES-DIS transition; should not be changed</td>
+</tr>
+<tr>
+<td align="center">coh_mass_correction</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off Rein Sehgal correction to charge current coherent pion production</td>
+</tr>
+<tr>
+<td align="center">coh_new</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Change between old (0) and improved (1) implementation of coherent pion production</td>
+</tr>
+</tbody>
+</table>
+<h3 id="two-body-current">Two-body current<a class="headerlink" href="#two-body-current" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter name</th>
+<th align="center">Possible arguments</th>
+<th align="center">Default value</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">mec_kind</td>
+<td align="center">1-4</td>
+<td align="center">1</td>
+<td align="center">Two-body current models:<br>1 - Transverse Enhancement model (Ref. [9])<br>2 - based on Marteau model (Ref. [10, 12])<br>3 - Nieves et al. model (Ref. [11])</td>
+</tr>
+<tr>
+<td align="center">mec_ratio_pp</td>
+<td align="center">[0,1]</td>
+<td align="center">0.6</td>
+<td align="center">The fraction of mixed initial nucleon pairs for charge current interaction. For neutral current the fraction is calculated as 1/(2*mec ratio pp + 1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="final-state-interactions">Final state interactions<a class="headerlink" href="#final-state-interactions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter name</th>
+<th align="center">Possible arguments</th>
+<th align="center">Default value</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">kaskada_on</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on (1) / off (0) final state interactions</td>
+</tr>
+<tr>
+<td align="center">kaskada_w</td>
+<td align="center">positive number</td>
+<td align="center">7</td>
+<td align="center">The value of the effective potential subtracted from the nucleons energy leaving the nucleus</td>
+</tr>
+<tr>
+<td align="center">kaskada_redo</td>
+<td align="center">0, 1</td>
+<td align="center">0</td>
+<td align="center">If on, given output file (<em>eventsout.root</em> by default) is loaded, the primary vertex is copied and only final state interactions are simulated. New output file with <em>.fsi.root</em> suffix is created</td>
+</tr>
+<tr>
+<td align="center">kaskada_writeall</td>
+<td align="center">0, 1</td>
+<td align="center">0</td>
+<td align="center">If on, all particles created during final state interactions are saved in <em>all</em> vector</td>
+</tr>
+<tr>
+<td align="center">step</td>
+<td align="center">positive number</td>
+<td align="center">0.2</td>
+<td align="center">Length of max step in the cascade in fm</td>
+</tr>
+<tr>
+<td align="center">xsec</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Cross section models for pion-nucleon interactions:<br> 0 - based on Ref. [13]<br>1 - based on Ref. [14]</td>
+</tr>
+<tr>
+<td align="center">pauli_blocking</td>
+<td align="center">0, 1</td>
+<td align="center">1</td>
+<td align="center">Turn on/off Pauli blocking</td>
+</tr>
+<tr>
+<td align="center">formation_length<br><em>(for formation_zone const)</em></td>
+<td align="center">positive number</td>
+<td align="center">1</td>
+<td align="center">Formation length in fm</td>
+</tr>
+<tr>
+<td align="center">tau</td>
+<td align="center">positive number</td>
+<td align="center">8</td>
+<td align="center">The parameter control the formation length for <em>ranft</em> and <em>rl</em> models</td>
+</tr>
+<tr>
+<td align="center">first_step</td>
+<td align="center">0, 1</td>
+<td align="center">0</td>
+<td align="center">If off, the formation zone is applied only for the particles created during final state interactions</td>
+</tr>
+<tr>
+<td align="center">formation_zone</td>
+<td align="center"><em>explained below</em></td>
+<td align="center">fz</td>
+<td align="center">explained below</td>
+</tr>
+</tbody>
+</table>
+<h3 id="formation-zone-models">Formation zone models<a class="headerlink" href="#formation-zone-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>nofz</code>: formation zone is off</li>
+<li><code>skat8</code>: SKAT parametrization (Ref. [15])</li>
+<li><code>cosyn</code>: parametrization based on Color Transparency measurements (Ref. [16])</li>
+<li><code>cohl</code>: coherence length (Ref. [17])</li>
+<li><code>ranft</code>: parametrization based on hadron-hadron and hadron-nucleus collision (Ref. [18])</li>
+<li><code>rl</code>: as <em>ranft</em> but with fixed transverse momentum equal zero</li>
+<li><code>delta</code>: for resonance pion production; based on ∆ lifetime (Ref. [19])</li>
+<li><code>const</code>: constant value (defined by <em>formation_length</em>)</li>
+<li><code>fz</code> (default):<ul>
+<li><code>cohl</code> for quasi-elastic scattering</li>
+<li><code>delta</code> for resonance pion production</li>
+<li><code>ranft</code> for deep inelastic scattering</li>
+<li><code>nofz</code> for meson exchange current</li>
+</ul>
+</li>
+<li><code>trans</code>: only for nuclear transparency analysis</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>[1] R. Bradford et al. “A New parameterization of the nucleon elastic form-factors”. Nucl.Phys.Proc.Suppl.
+159 (2006), pp. 127–132.</p>
+<p>[2] Howard Scott Budd, A. Bodek, and J. Arrington. “Modeling quasielastic form-factors for
+electron and neutrino scattering” . arXiv: hep-ex/0308005 (2003).</p>
+<p>[3] E.J. Brash et al. “New empirical fits to the proton electromagnetic form-factors”. Phys.Rev.
+C65 (2002), p. 051001.</p>
+<p>[4] Krzysztof M. Graczyk, Piotr Plonski, and Robert Sulej. “Neural Network Parameterizations
+of Electromagnetic Nucleon Form Factors”. JHEP. 1009 (2010), p. 053.</p>
+<p>[5] K.M. Graczyk, D. Kielczewska, P. Przewlocki, and J.T. Sobczyk. "C(5)**A axial form factor from bubble chamber experiments". Phys.Rev. D80 (2009) 093001</p>
+<p>[6] Olga Lalakulich and Emmanuel A. Paschos. “Resonance production by neutrinos. I. J = 3/2
+resonances”. Phys.Rev. D71 (2005), p. 074003.</p>
+<p>[7] L. Alvarez-Ruso, S. K. Singh, and M. J. Vicente Vacas. “Charged current weak electroproduction
+of the ∆ resonance”. Phys. Rev. C. 57 (5 1998), pp. 2693–2699.</p>
+<p>[8] D. Barquilla-Cano, A.J. Buchmann, and E. Hernandez. “Axial N-¿Delta(1232) and N-¿N*(1440)
+transition form factors”. Phys.Rev. C75 (2007), p. 065203.</p>
+<p>[9] A. Bodek, H.S. Budd, and M.E. Christy. “Neutrino Quasielastic Scattering on Nuclear Targets:
+Parametrizing Transverse Enhancement (Meson Exchange Currents)”. Eur.Phys.J. C71 (2011), p. 1726.</p>
+<p>[10] Jan T. Sobczyk. “Modeling nuclear effects in neutrino interactions in 1-GeV region” . arXiv:
+nucl-th/0307047 (2003).</p>
+<p>[11] J. Nieves, I. Ruiz Simo, and M. J. Vicente Vacas. “Inclusive charged-current neutrino-nucleus
+reactions”. Phys. Rev. C. 83 (4 2011), p. 045501.</p>
+<p>[12] M. Martini et al. “Unified approach for nucleon knock-out and coherent and incoherent pion
+production in neutrino interactions with nuclei”. Phys. Rev. C. 80 (6 2009), p. 065501.</p>
+<p>[13] N. Metropolis et al. “Monte Carlo Calculations on Intranuclear Cascades. I. Low-Energy
+Studies”. Phys.Rev. 110 (1958), pp. 185–203.</p>
+<p>[14] L.L. Salcedo et al. “Computer simulation of inclusive pion nuclear reactions”. Nucl.Phys.
+A484 (1988), p. 557.</p>
+<p>[15] D.S. Baranov et al. “An estimate for the formation length of hadrons in neutrino interactions”
+(1984).</p>
+<p>[16] Wim Cosyn. “Exploring the limits of a hadronic picture of nuclei through pion and nucleon
+removal reactions”. PhD thesis. Ghent University, 2009. url: http://lib.ugent.be/fulltxt/RUG01/001/350/817/RUG01-001350817/_2010/_0001/_AC.pdf1</p>
+<p>[17] A. Rubbia G. Battistoni A. Ferrari and P.R. Sala. The FLUKA nuclear cascade model applied
+to neutrino interactions. talk given at NuInt02. 2002.</p>
+<p>[18] J. Ranft. “Hadron production in hadron-nucleus and nucleus-nucleus collisions in a dual
+parton model modified by a formation zone intranuclear cascade”. Zeitschrift f¨ur Physik C
+Particles and Fields. 43.3 (1989), pp. 439–446.</p>
+<p>[19] Tomasz Golan, Cezary Juszczak, and Jan T. Sobczyk. “Final State Interactions Effects in
+Neutrino-Nucleus Interactions”. Phys.Rev. C86 (2012), p. 015505.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../running/" title="Running NuWro" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Running NuWro
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../analyze-output/basics/" title="Basics" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Basics
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/nuwro" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

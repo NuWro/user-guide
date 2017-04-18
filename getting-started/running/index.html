@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="NuWro Monte Carlo neutrino event generator documentation ">
+      
+      
+        <link rel="canonical" href="https://nuwro.github.io/wiki/getting-started/running/">
+      
+      
+        <meta name="author" content="NuWro Collaboration">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+    
+    
+      
+        <title>Running NuWro - NuWro User Guide</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://nuwro.github.io/wiki" title="NuWro User Guide" class="md-logo md-header-nav__button">
+            <img src="../../img/nuwro_logo.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Getting started
+                </span>
+              
+            
+            Running NuWro
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/nuwro/nuwro" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      NuWro
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/nuwro_logo.svg">
+      </i>
+    
+    NuWro User Guide
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/nuwro/nuwro" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      NuWro
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Running NuWro
+      </label>
+    
+    <a href="./" title="Running NuWro" class="md-nav__link md-nav__link--active">
+      Running NuWro
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics" title="Basics" class="md-nav__link">
+    Basics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" title="Input" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" title="Output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ccqe-on-carbon" title="CCQE on Carbon" class="md-nav__link">
+    CCQE on Carbon
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setting-the-beam" title="1. Setting the beam" class="md-nav__link">
+    1. Setting the beam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setting-the-target" title="2. Setting the target" class="md-nav__link">
+    2. Setting the target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-setting-dynamics" title="3. Setting dynamics" class="md-nav__link">
+    3. Setting dynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-running-simulation" title="4. Running simulation" class="md-nav__link">
+    4. Running simulation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparing-nucleus-models" title="Comparing nucleus models" class="md-nav__link">
+    Comparing nucleus models
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setting-beam-and-target" title="1. Setting beam and target" class="md-nav__link">
+    1. Setting beam and target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setting-dynamics" title="2. Setting dynamics" class="md-nav__link">
+    2. Setting dynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-running-simulations" title="3. Running simulations" class="md-nav__link">
+    3. Running simulations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parameters/" title="Parameters list" class="md-nav__link">
+      Parameters list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Analyze an output
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Analyze an output
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analyze-output/basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analyze-output/interactive/" title="Interactive mode" class="md-nav__link">
+      Interactive mode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analyze-output/macros/" title="ROOT macros" class="md-nav__link">
+      ROOT macros
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../references/" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics" title="Basics" class="md-nav__link">
+    Basics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" title="Input" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" title="Output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ccqe-on-carbon" title="CCQE on Carbon" class="md-nav__link">
+    CCQE on Carbon
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setting-the-beam" title="1. Setting the beam" class="md-nav__link">
+    1. Setting the beam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setting-the-target" title="2. Setting the target" class="md-nav__link">
+    2. Setting the target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-setting-dynamics" title="3. Setting dynamics" class="md-nav__link">
+    3. Setting dynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-running-simulation" title="4. Running simulation" class="md-nav__link">
+    4. Running simulation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparing-nucleus-models" title="Comparing nucleus models" class="md-nav__link">
+    Comparing nucleus models
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setting-beam-and-target" title="1. Setting beam and target" class="md-nav__link">
+    1. Setting beam and target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setting-dynamics" title="2. Setting dynamics" class="md-nav__link">
+    2. Setting dynamics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-running-simulations" title="3. Running simulations" class="md-nav__link">
+    3. Running simulations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Running NuWro</h1>
+                
+                <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
+<p>After a successful installation you will find <code>nuwro</code> executable in <code>nuwro/bin</code>
+folder. </p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can run NuWro providing the path to <code>nuwro</code>
+or you can add <code>nuwro/bin</code> to <code>$PATH</code> by adding the following line
+to your <code>~/.bashrc</code>:</p>
+<div class="codehilite"><pre><span></span><span class="x">export PATH=(path to nuwro)/bin:</span><span class="p">$</span><span class="nv">PATH</span><span class="x"></span>
+</pre></div>
+
+
+</div>
+<p>NuWro does not require any command line arguments, although there are several
+optional arguments:</p>
+<ul>
+<li><code>-o</code> to provide the path for output files</li>
+<li><code>-i</code> to provide the path to an input file with simulation settings</li>
+<li><code>-p</code> to change a single simulation parameter w.r.t to the input file
+(this one can be use multiple times)</li>
+</ul>
+<p>In general, the command to run NuWro would look like this:</p>
+<div class="codehilite"><pre><span></span>nuwro [-o output root file] \
+      [-i input parameters file] \
+      [-p &quot;parameter name 1 = value 1&quot;] \
+      [-p &quot;parameter name 2 = value 2&quot;] \
+      ...
+      [-p &quot;parameter name N = value N&quot;]
+</pre></div>
+
+
+<div class="admonition warning">
+<p>When running RES and DIS channel you will see many PYTHIA warnings about
+catching an infinite loop - just ignore them. </p>
+</div>
+<h3 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
+<p>The path to a simulation settings file can be provided with <code>-i</code> option.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the path to a simulation settings file is not provided:</p>
+<ul>
+<li><code>$PWD/params.txt</code> will be used or</li>
+<li><code>nuwro/data/params.txt</code> will be used or</li>
+<li>hard-coded default settings will be used.</li>
+</ul>
+</div>
+<p>The example settings file can be found in <code>nuwro/data/params.txt</code>. 
+It is recommended to copy this file to the working directory
+and modify as needed.</p>
+<p>The list of available settings can be found in <a href="../parameters">parameters section</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>Copy default settings files to your working directory:</p>
+<div class="codehilite"><pre><span></span>cp /path/to/nuwro/data/params.txt .
+</pre></div>
+
+
+<p>modify as needed and run NuWro:</p>
+<div class="codehilite"><pre><span></span>nuwro
+</pre></div>
+
+
+<p><em>Note: If <code>nuwro/bin</code> is not in <code>$PATH</code> you need to provide the full path.</em></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>Copy default settings files:</p>
+<div class="codehilite"><pre><span></span>cp /path/to/nuwro/data/params.txt /some/path/my_params.txt
+</pre></div>
+
+
+<p>modify as needed and run NuWro providing the path to <code>my_params.txt</code>:</p>
+<div class="codehilite"><pre><span></span>nuwro -i /some/path/my_params.txt
+</pre></div>
+
+
+</div>
+<p>Parameters from a settings file can be modified using <code>-p</code> option.
+It is useful if you need to perform several simulations with only small changes
+to settings.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <code>/some/path/my_params.txt</code> be you base configuration.
+The following bash script:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="k">for</span> Ma in <span class="k">$(</span>seq <span class="m">1000</span> <span class="m">100</span> 1300<span class="k">)</span>
+<span class="k">do</span>
+    nuwro -i /some/path/my_params.txt <span class="se">\</span>
+          -o my_output_<span class="nv">$Ma</span>.root <span class="se">\</span>
+          -p <span class="s2">&quot;qel_cc_axial_mass = </span><span class="nv">$Ma</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</pre></div>
+</td></tr></table>
+
+<p>will perform 4 simulations with the same settings but axial mass.</p>
+</div>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<p>NuWro produces three output files:</p>
+<ul>
+<li><code>$PWD/eventsout.root</code> with an events tree</li>
+<li><code>$PWD/eventsout.root.txt</code> with flux-integrated cross sections</li>
+<li><code>$PWD/eventsout.root.par</code> with parameters used for the simulation</li>
+</ul>
+<p>The output path can be changed with <code>-o</code> option.</p>
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>The following command:</p>
+<div class="codehilite"><pre><span></span>nuwro -o /path/to/simulation.root
+</pre></div>
+
+
+<p>will produce the following output files:</p>
+<ul>
+<li><code>/path/to/simulation.root</code></li>
+<li><code>/path/to/simulation.root.txt</code></li>
+<li><code>/path/to/simulation.root.par</code></li>
+</ul>
+</div>
+<p>The instruction on how to work with NuWro output files can be found <a href="../../analyze-output/basics">here</a>.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p>The list of all available settings
+(as well as instruction on how to define beam and target)
+can be found in <a href="../parameters">parameters section</a>.</p>
+<p>This section is just to demonstrate basic usage.</p>
+<h3 id="ccqe-on-carbon">CCQE on Carbon<a class="headerlink" href="#ccqe-on-carbon" title="Permanent link">&para;</a></h3>
+<p>We want to perform the following simulation:</p>
+<ul>
+<li>muon neutrino</li>
+<li>mono-energetic beam 1 GeV</li>
+<li>target = Carbon</li>
+<li>only CCQE dynamics</li>
+</ul>
+<p>Lets start with grabbing the default settings file,
+which we are going to modify for our needs:</p>
+<div class="codehilite"><pre><span></span>cp /path/to/nuwro/data/params.txt ccqe_carbon.txt
+</pre></div>
+
+
+<h4 id="1-setting-the-beam">1. Setting the beam<a class="headerlink" href="#1-setting-the-beam" title="Permanent link">&para;</a></h4>
+<p>Locate "Beam specification" section and make sure
+that all beam related settings are commented (including includes <code>@beam/...</code>).</p>
+<p>Add the following lines to define the beam:</p>
+<div class="codehilite"><pre><span></span>beam_type = 0
+beam_particle = 14
+beam_energy = 1000
+</pre></div>
+
+
+<h4 id="2-setting-the-target">2. Setting the target<a class="headerlink" href="#2-setting-the-target" title="Permanent link">&para;</a></h4>
+<p>Locate "Target specification" section and make sure
+that all target related settings are commented (including includes <code>@target/...</code>).</p>
+<p>Add the following lines to define the target:</p>
+<div class="codehilite"><pre><span></span>target_type = 0
+nucleus_p = 6
+nucleus_n = 6
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Predefined targets</p>
+<p>Instead of defining target by hand it is possible to use predefined targets
+from <code>nuwro/data/target/</code> folder. In this case simply add:</p>
+<div class="codehilite"><pre><span></span>@target/C.txt
+</pre></div>
+
+
+</div>
+<h4 id="3-setting-dynamics">3. Setting dynamics<a class="headerlink" href="#3-setting-dynamics" title="Permanent link">&para;</a></h4>
+<p>Locate the following lines:</p>
+<div class="codehilite"><pre><span></span>dyn_qel_cc = 1  // Quasi elastic charged current
+dyn_qel_nc = 0  // Quasi elastic neutral current
+dyn_res_cc = 0  // Resonant charged current 
+dyn_res_nc = 0  // Resonant neutral current
+dyn_dis_cc = 0  // Deep inelastic charged current 
+dyn_dis_nc = 0  // Deep inelastic neutral current 
+dyn_coh_cc = 0  // Coherent charged current
+dyn_coh_nc = 0  // Coherent neutral current
+dyn_mec_cc = 0  // Meson exchange charged current
+dyn_mec_nc = 0  // Meson exchange neutral current
+</pre></div>
+
+
+<p>and modify according to your needs. In this case disable all dynamics but CCQE.</p>
+<h4 id="4-running-simulation">4. Running simulation<a class="headerlink" href="#4-running-simulation" title="Permanent link">&para;</a></h4>
+<p>If the <code>ccqe_carbon.txt</code> settings file is ready simply run:</p>
+<div class="codehilite"><pre><span></span>nuwro -i ccqe_carbon.txt -o ccqe_carbon.root
+</pre></div>
+
+
+<h3 id="comparing-nucleus-models">Comparing nucleus models<a class="headerlink" href="#comparing-nucleus-models" title="Permanent link">&para;</a></h3>
+<p>We want to compare three nucleus models implemented in NuWro:</p>
+<ul>
+<li>(global) Fermi gas (with fixed Fermi level)</li>
+<li>local Fermi gas (with Fermi level dependent on density)</li>
+<li>spectral function</li>
+</ul>
+<p>Lets consider the NuMi neutrino beam and CH target for all CC channels.
+We need to perform three simulation, but they all may share the base settings file:</p>
+<div class="codehilite"><pre><span></span>cp /path/to/nuwro/data/params.txt numi_cc_ch.txt
+</pre></div>
+
+
+<h4 id="1-setting-beam-and-target">1. Setting beam and target<a class="headerlink" href="#1-setting-beam-and-target" title="Permanent link">&para;</a></h4>
+<p>Make sure that all other beam and target settings
+("Beam specification" and "Target specification") are commented.
+Then add the following lines to <code>numi_cc_ch.txt</code>:</p>
+<div class="codehilite"><pre><span></span>@beam/NuMi_nu_100_10000.txt  # predefined beam from nuwro/data/beam/
+
+target_type = 1              # composed target
+target_content = 6 6 1x      # 1 x Carbon
+target_content += 1 0 1x     # 1 x Hydrogen
+</pre></div>
+
+
+<h4 id="2-setting-dynamics">2. Setting dynamics<a class="headerlink" href="#2-setting-dynamics" title="Permanent link">&para;</a></h4>
+<p>Locate the following lines:</p>
+<div class="codehilite"><pre><span></span>dyn_qel_cc = 1  // Quasi elastic charged current
+dyn_qel_nc = 0  // Quasi elastic neutral current
+dyn_res_cc = 1  // Resonant charged current 
+dyn_res_nc = 0  // Resonant neutral current
+dyn_dis_cc = 1  // Deep inelastic charged current 
+dyn_dis_nc = 0  // Deep inelastic neutral current 
+dyn_coh_cc = 1  // Coherent charged current
+dyn_coh_nc = 0  // Coherent neutral current
+dyn_mec_cc = 1  // Meson exchange charged current
+dyn_mec_nc = 0  // Meson exchange neutral current
+</pre></div>
+
+
+<p>and modify according to your needs. In this case turn on only CC interactions.</p>
+<h4 id="3-running-simulations">3. Running simulations<a class="headerlink" href="#3-running-simulations" title="Permanent link">&para;</a></h4>
+<p>As we are going to change only nucleus model we may use the same base settings
+file for all three simulations.</p>
+<p>For (global) Fermi gas you have to set <code>nucleus_target = 1</code>
+and you may want to make sure that spectral function is disabled (<code>sf_method</code>):</p>
+<div class="codehilite"><pre><span></span>nuwro -i numi_cc_ch.txt \
+      -p &quot;nucleus_target = 1&quot; \
+      -p &quot;sf_method = 0&quot; \
+      -o numi_cc_ch_gfg.root
+</pre></div>
+
+
+<p>In the similar way you can perform the simulation for local Fermi gas:</p>
+<div class="codehilite"><pre><span></span>nuwro -i numi_cc_ch.txt \
+      -p &quot;nucleus_target = 2&quot; \
+      -p &quot;sf_method = 0&quot; \
+      -o numi_cc_ch_lfg.root
+</pre></div>
+
+
+<p>and for spectral function:</p>
+<div class="codehilite"><pre><span></span>nuwro -i numi_cc_ch.txt \
+      -p &quot;nucleus_target = 2&quot; \
+      -p &quot;sf_method = 1&quot; \
+      -o numi_cc_ch_sf.root
+</pre></div>
+
+
+<div class="admonition note">
+<p>Spectral function is applied only for (quasi-)elastic dynamics.
+For others the model set by <code>nucleus_target</code> is used.</p>
+</div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Installation
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../parameters/" title="Parameters list" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Parameters list
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/nuwro" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

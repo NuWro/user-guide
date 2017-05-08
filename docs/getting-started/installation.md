@@ -32,16 +32,26 @@ git clone -b nuwro_17.01 https://github.com/NuWro/nuwro.git
 * [ROOT](https://root.cern.ch/)
 * [PYTHIA6](https://pythia6.hepforge.org/)
 
+!!! fail "macOS support"
+    NuWro has been tested to work properly on the following configuration
+
+        x86_64-apple-darwin15.6.0
+        clang-800.0.42.1
+        ROOT5
+
+    Note that it is known not to work properly with ROOT6 on macOS.
+
 ### Building ROOT with PYTHIA6 support
 
 * download [ROOT source code](http://root.cern.ch/drupal/content/downloading-root)
 * make sure you have all [ROOT dependencies](http://root.cern.ch/drupal/content/build-prerequisites) installed
 * download [PYTHIA6 source code](http://neutrino.ift.uni.wroc.pl/files/pythia6.tar.gz)
-* build PYTHIA6 shared object (`libPythia6.so`):
+* build PYTHIA6 shared object `libPythia6.so` (macOS: `libPythia6.dynlib`):
 
 ```bash
 tar -xzvf pythia6.tar.gz
-cd pythia6 && ./makePythia6.linux
+cd pythia6 && ./makePythia6.linux 
+(cd pythia6 && ./makePythia6.macosx64)
 ```
 
 !!! important ""
@@ -53,6 +63,7 @@ cd pythia6 && ./makePythia6.linux
 tar -zxvf root_v*.source.tar.gz
 mkdir root/lib
 cp pythia6/libPythia6.so root/lib
+(cp pythia6/libPythia6.dynlib root/lib)
 ```
 
 * configure ROOT:
@@ -67,7 +78,7 @@ cd root && ./configure --with-pythia6-libdir=lib
 make
 ```
 
-* set environmental variables: create a script, like `setup_root.sh`
+* set environmental variables:
 
 ```bash
 export ROOTSYS=(path to root directory)
@@ -75,8 +86,8 @@ export PATH=$PATH:$ROOTSYS/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib
 ```
 
-and run `source setup_root.sh` every time you start a terminal
-or add the above lines to either `~/.bashrc` or `~/.bash_profile`.
+you can use the script `bin/this_root.sh` and run `source bin/this_root.sh` every time you start a terminal
+or add the above lines to either `~/.bashrc` or `~/.bash_profile` (macOS: `~/.profile`).
 
 ## Building NuWro
 

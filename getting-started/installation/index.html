@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-8d06ab29f4.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-4d0d3f2fbf.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -96,7 +96,7 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
@@ -510,15 +510,27 @@ git checkout tags/nuwro_17.01
 <li><a href="https://root.cern.ch/">ROOT</a></li>
 <li><a href="https://pythia6.hepforge.org/">PYTHIA6</a></li>
 </ul>
+<div class="admonition fail">
+<p class="admonition-title">macOS support</p>
+<p>NuWro has been tested to work properly on the following configuration</p>
+<div class="codehilite"><pre><span></span>x86_64-apple-darwin15.6.0
+clang-800.0.42.1
+ROOT5
+</pre></div>
+
+
+<p>Note that it is known not to work properly with ROOT6 on macOS.</p>
+</div>
 <h3 id="building-root-with-pythia6-support">Building ROOT with PYTHIA6 support<a class="headerlink" href="#building-root-with-pythia6-support" title="Permanent link">&para;</a></h3>
 <ul>
 <li>download <a href="http://root.cern.ch/drupal/content/downloading-root">ROOT source code</a></li>
 <li>make sure you have all <a href="http://root.cern.ch/drupal/content/build-prerequisites">ROOT dependencies</a> installed</li>
 <li>download <a href="http://neutrino.ift.uni.wroc.pl/files/pythia6.tar.gz">PYTHIA6 source code</a></li>
-<li>build PYTHIA6 shared object (<code>libPythia6.so</code>):</li>
+<li>build PYTHIA6 shared object <code>libPythia6.so</code> (macOS: <code>libPythia6.dynlib</code>):</li>
 </ul>
 <div class="codehilite"><pre><span></span>tar -xzvf pythia6.tar.gz
-<span class="nb">cd</span> pythia6 <span class="o">&amp;&amp;</span> ./makePythia6.linux
+<span class="nb">cd</span> pythia6 <span class="o">&amp;&amp;</span> ./makePythia6.linux 
+<span class="o">(</span><span class="nb">cd</span> pythia6 <span class="o">&amp;&amp;</span> ./makePythia6.macosx64<span class="o">)</span>
 </pre></div>
 
 
@@ -531,6 +543,7 @@ git checkout tags/nuwro_17.01
 <div class="codehilite"><pre><span></span>tar -zxvf root_v*.source.tar.gz
 mkdir root/lib
 cp pythia6/libPythia6.so root/lib
+<span class="o">(</span>cp pythia6/libPythia6.dynlib root/lib<span class="o">)</span>
 </pre></div>
 
 
@@ -549,7 +562,7 @@ cp pythia6/libPythia6.so root/lib
 
 
 <ul>
-<li>set environmental variables: create a script, like <code>setup_root.sh</code></li>
+<li>set environmental variables:</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">ROOTSYS</span><span class="o">=(</span>path to root directory<span class="o">)</span>
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ROOTSYS</span>/bin
@@ -557,8 +570,8 @@ cp pythia6/libPythia6.so root/lib
 </pre></div>
 
 
-<p>and run <code>source setup_root.sh</code> every time you start a terminal
-or add the above lines to either <code>~/.bashrc</code> or <code>~/.bash_profile</code>.</p>
+<p>you can use the script <code>bin/this_root.sh</code> and run <code>source bin/this_root.sh</code> every time you start a terminal
+or add the above lines to either <code>~/.bashrc</code> or <code>~/.bash_profile</code> (macOS: <code>~/.profile</code>).</p>
 <h2 id="building-nuwro">Building NuWro<a class="headerlink" href="#building-nuwro" title="Permanent link">&para;</a></h2>
 <p>Once you have ROOT installed with PYTHIA6 support just make NuWro:</p>
 <div class="codehilite"><pre><span></span>tar -zxvf nuwro-*.tar.gz
@@ -573,7 +586,7 @@ and getting errors about undefined references to <em>std::__cxx11</em>
 (described <a href="https://gcc.gnu.org/onlinedocs/gcc-5.2.0/libstdc++/manual/manual/using_dual_abi.html">here</a>),
 you can add the following flag:</li>
 </ul>
-<div class="codehilite"><pre><span></span>-D_GLIBCXX_USE_CXX11_ABI<span class="o">=</span>0
+<div class="codehilite"><pre><span></span>-D_GLIBCXX_USE_CXX11_ABI<span class="o">=</span><span class="m">0</span>
 </pre></div>
 
 
@@ -655,7 +668,7 @@ you can add the following flag:</li>
       
     </div>
     
-      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script src="../../assets/javascripts/application-6b599127bc.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
         <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

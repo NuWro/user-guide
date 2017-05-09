@@ -510,27 +510,15 @@ git checkout tags/nuwro_17.01
 <li><a href="https://root.cern.ch/">ROOT</a></li>
 <li><a href="https://pythia6.hepforge.org/">PYTHIA6</a></li>
 </ul>
-<div class="admonition fail">
-<p class="admonition-title">macOS support</p>
-<p>NuWro has been tested to work properly on the following configuration</p>
-<div class="codehilite"><pre><span></span>x86_64-apple-darwin15.6.0
-clang-800.0.42.1
-ROOT5
-</pre></div>
-
-
-<p>Note that it is known not to work properly with ROOT6 on macOS.</p>
-</div>
 <h3 id="building-root-with-pythia6-support">Building ROOT with PYTHIA6 support<a class="headerlink" href="#building-root-with-pythia6-support" title="Permanent link">&para;</a></h3>
 <ul>
 <li>download <a href="http://root.cern.ch/drupal/content/downloading-root">ROOT source code</a></li>
 <li>make sure you have all <a href="http://root.cern.ch/drupal/content/build-prerequisites">ROOT dependencies</a> installed</li>
 <li>download <a href="http://neutrino.ift.uni.wroc.pl/files/pythia6.tar.gz">PYTHIA6 source code</a></li>
-<li>build PYTHIA6 shared object <code>libPythia6.so</code> (macOS: <code>libPythia6.dynlib</code>):</li>
+<li>build PYTHIA6 shared object (<code>libPythia6.so</code>):</li>
 </ul>
 <div class="codehilite"><pre><span></span>tar -xzvf pythia6.tar.gz
-<span class="nb">cd</span> pythia6 <span class="o">&amp;&amp;</span> ./makePythia6.linux 
-<span class="o">(</span><span class="nb">cd</span> pythia6 <span class="o">&amp;&amp;</span> ./makePythia6.macosx64<span class="o">)</span>
+<span class="nb">cd</span> pythia6 <span class="o">&amp;&amp;</span> ./makePythia6.linux
 </pre></div>
 
 
@@ -543,7 +531,6 @@ ROOT5
 <div class="codehilite"><pre><span></span>tar -zxvf root_v*.source.tar.gz
 mkdir root/lib
 cp pythia6/libPythia6.so root/lib
-<span class="o">(</span>cp pythia6/libPythia6.dynlib root/lib<span class="o">)</span>
 </pre></div>
 
 
@@ -570,8 +557,24 @@ cp pythia6/libPythia6.so root/lib
 </pre></div>
 
 
-<p>you can use the script <code>bin/this_root.sh</code> and run <code>source bin/this_root.sh</code> every time you start a terminal
-or add the above lines to either <code>~/.bashrc</code> or <code>~/.bash_profile</code> (macOS: <code>~/.profile</code>).</p>
+<p>you can use the script provided by ROOT (<code>bin/this_root.sh</code>) that includes the commands and run <code>source bin/this_root.sh</code> every time you start a terminal or add the above lines to either <code>~/.bashrc</code> or <code>~/.bash_profile</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">macOS support</p>
+<p>NuWro has been tested to work properly on the following configuration</p>
+<div class="codehilite"><pre><span></span>x86_64-apple-darwin15.6.0
+clang-800.0.42.1
+root-5.34.36
+</pre></div>
+
+
+<p>While installing on macOS one should remember about the following differences:</p>
+<ul>
+<li>PYTHIA6 should be compiled using the <code>./makePythia6.macosx64</code> command,</li>
+<li>the shared object of PYTHIA6 is called <code>libPythia6.dylib</code>,</li>
+<li>the bash profile file is called <code>~/.profile</code>.</li>
+</ul>
+<p>Note that the macOS configuration with ROOT6 is known not to work properly.</p>
+</div>
 <h2 id="building-nuwro">Building NuWro<a class="headerlink" href="#building-nuwro" title="Permanent link">&para;</a></h2>
 <p>Once you have ROOT installed with PYTHIA6 support just make NuWro:</p>
 <div class="codehilite"><pre><span></span>tar -zxvf nuwro-*.tar.gz

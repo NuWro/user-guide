@@ -32,26 +32,16 @@ git clone -b nuwro_17.01 https://github.com/NuWro/nuwro.git
 * [ROOT](https://root.cern.ch/)
 * [PYTHIA6](https://pythia6.hepforge.org/)
 
-!!! fail "macOS support"
-    NuWro has been tested to work properly on the following configuration
-
-        x86_64-apple-darwin15.6.0
-        clang-800.0.42.1
-        ROOT5
-
-    Note that it is known not to work properly with ROOT6 on macOS.
-
 ### Building ROOT with PYTHIA6 support
 
 * download [ROOT source code](http://root.cern.ch/drupal/content/downloading-root)
 * make sure you have all [ROOT dependencies](http://root.cern.ch/drupal/content/build-prerequisites) installed
 * download [PYTHIA6 source code](http://neutrino.ift.uni.wroc.pl/files/pythia6.tar.gz)
-* build PYTHIA6 shared object `libPythia6.so` (macOS: `libPythia6.dynlib`):
+* build PYTHIA6 shared object (`libPythia6.so`):
 
 ```bash
 tar -xzvf pythia6.tar.gz
-cd pythia6 && ./makePythia6.linux 
-(cd pythia6 && ./makePythia6.macosx64)
+cd pythia6 && ./makePythia6.linux
 ```
 
 !!! important ""
@@ -63,7 +53,6 @@ cd pythia6 && ./makePythia6.linux
 tar -zxvf root_v*.source.tar.gz
 mkdir root/lib
 cp pythia6/libPythia6.so root/lib
-(cp pythia6/libPythia6.dynlib root/lib)
 ```
 
 * configure ROOT:
@@ -86,8 +75,22 @@ export PATH=$PATH:$ROOTSYS/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib
 ```
 
-you can use the script `bin/this_root.sh` and run `source bin/this_root.sh` every time you start a terminal
-or add the above lines to either `~/.bashrc` or `~/.bash_profile` (macOS: `~/.profile`).
+you can use the script provided by ROOT (`bin/this_root.sh`) that includes the commands and run `source bin/this_root.sh` every time you start a terminal or add the above lines to either `~/.bashrc` or `~/.bash_profile`.
+
+!!! note "macOS support"
+    NuWro has been tested to work properly on the following configuration
+
+        x86_64-apple-darwin15.6.0
+        clang-800.0.42.1
+        root-5.34.36
+
+    While installing on macOS one should remember about the following differences:
+
+    * PYTHIA6 should be compiled using the `./makePythia6.macosx64` command,
+    * the shared object of PYTHIA6 is called `libPythia6.dylib`,
+    * the bash profile file is called `~/.profile`.
+
+    Note that the macOS configuration with ROOT6 is known not to work properly.
 
 ## Building NuWro
 

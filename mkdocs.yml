@@ -29,7 +29,7 @@ theme: material
 
 #  Options
 extra:
-  logo: 'img/nuwro_logo.svg'
+  logo: 'img/LOGO-B.svg'
   palette:
     primary: 'blue grey'
     accent: 'blue'

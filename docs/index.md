@@ -1,4 +1,4 @@
-![](img/nuwro_head.png)
+![](img/LOGO-B-napis.svg)
 
 NuWro is a Monte Carlo neutrino event generator. It has been developed since 2006 at the University of Wroclaw. It includes all basic dynamics for neutrino scattering processes (for both neutral and charged currents):
 

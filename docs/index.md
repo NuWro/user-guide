@@ -20,7 +20,9 @@ This wiki describes technical aspect of using NuWro rather than physics implemen
 
 <p align=center><font size=5><u>Credits</u></font></p>
 
-<div style="float:left; width:50%">
+<div style="margin-left: 5%">
+
+<div style="float:left; width:42%">
 
 Currently involved in the project:
 
@@ -40,7 +42,7 @@ Former members:
 </ul>
 
 </div>
-<div style="float:left; width:50%">
+<div style="float:right; width:42%">
 
 Significant contribution:
 
@@ -51,5 +53,7 @@ Significant contribution:
     <li>Luke Pickering</li>
     <li>Patrick Stowell</li>
 </ul>
+
+</div>
 
 </div>

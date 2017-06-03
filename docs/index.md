@@ -20,7 +20,7 @@ This wiki describes technical aspect of using NuWro rather than physics implemen
 
 <p align=center><font size=5><u>Credits</u></font></p>
 
-<div style="float:left; width:40%">
+<div style="float:left; width:50%">
 
 Currently involved in the project:
 
@@ -40,7 +40,7 @@ Former members:
 </ul>
 
 </div>
-<div style="float:right; width:40%">
+<div style="float:left; width:50%">
 
 Significant contribution:
 

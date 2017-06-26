@@ -45,7 +45,7 @@ cd pythia6 && ./makePythia6.linux
 ```
 
 !!! important ""
-    It requires g77 Fortran compiler (or g77 linked to gfortran).
+    It requires `gfortran` Fortran compiler.
 
 * copy `libPythia6.so` to `root/lib` folder:
 
@@ -90,7 +90,16 @@ you can use the script provided by ROOT (`bin/this_root.sh`) that includes the c
     * the shared object of PYTHIA6 is called `libPythia6.dylib`,
     * the bash profile file is called `~/.profile`.
 
-    Note that the macOS configuration with ROOT6 is known not to work properly.
+    Note that the following problems are known to emerge:
+
+    * NuWro has not yet been configured to work with ROOT6 under macOS,
+    * while installing `gfortran` via Homebrew the `libgfortran.dylib` file is not properly linked for the C compiler, one should export the variable `LIBRARY_PATH` with the path to the lib file.<br>
+    e.g. put into `~/.profile` the following line (it will depend on the `gfortran` installation)
+
+        `export LIBRARY_PATH=/usr/local/lib/gcc/6`
+
+
+
 
 ## Building NuWro
 

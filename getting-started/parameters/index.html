@@ -1026,7 +1026,7 @@ nucleus_n = 6
 <p>In order to define a multi-nuclei target you need to set up <code>target_type = 1</code>.</p>
 <p>Instead of using <code>nucleus_p</code>, <code>nucleus_n</code> and other nucleus related parameters
 you should define your target with:</p>
-<div class="codehilite"><pre><span></span><span class="n">target_content</span> <span class="o">=</span> <span class="p">[</span><span class="err">#</span><span class="n">protons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">neutrons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">nuclei</span><span class="p">]</span><span class="n">x</span> <span class="p">[</span><span class="n">binding</span> <span class="n">energy</span><span class="p">]</span> <span class="p">[</span><span class="n">Fermi</span> <span class="n">momentum</span><span class="p">]</span> <span class="p">[</span><span class="n">nucleus</span> <span class="n">model</span><span class="p">]</span>
+<div class="codehilite"><pre><span></span><span class="n">target_content</span> <span class="o">=</span> <span class="p">[</span><span class="err">#</span><span class="n">protons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">neutrons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">nuclei</span><span class="p">]</span> <span class="n">x</span> <span class="p">[</span><span class="n">binding</span> <span class="n">energy</span><span class="p">]</span> <span class="p">[</span><span class="n">Fermi</span> <span class="n">momentum</span><span class="p">]</span> <span class="p">[</span><span class="n">nucleus</span> <span class="n">target</span><span class="p">]</span>
 </pre></div>
 
 
@@ -1036,7 +1036,7 @@ you should define your target with:</p>
 are taken from tables anyway.</p>
 </div>
 <p>You may add as many nuclei as you want in the following way:</p>
-<div class="codehilite"><pre><span></span><span class="n">target_content</span> <span class="o">+=</span> <span class="p">[</span><span class="err">#</span><span class="n">protons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">neutrons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">nuclei</span><span class="p">]</span><span class="n">x</span> <span class="p">[</span><span class="n">binding</span> <span class="n">energy</span><span class="p">]</span> <span class="p">[</span><span class="n">Fermi</span> <span class="n">momentum</span><span class="p">]</span> <span class="p">[</span><span class="n">nucleus</span> <span class="n">model</span><span class="p">]</span>
+<div class="codehilite"><pre><span></span><span class="n">target_content</span> <span class="o">+=</span> <span class="p">[</span><span class="err">#</span><span class="n">protons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">neutrons</span><span class="p">]</span> <span class="p">[</span><span class="err">#</span><span class="n">nuclei</span><span class="p">]</span> <span class="n">x</span> <span class="p">[</span><span class="n">binding</span> <span class="n">energy</span><span class="p">]</span> <span class="p">[</span><span class="n">Fermi</span> <span class="n">momentum</span><span class="p">]</span> <span class="p">[</span><span class="n">nucleus</span> <span class="n">target</span><span class="p">]</span>
 </pre></div>
 
 
@@ -1044,9 +1044,9 @@ are taken from tables anyway.</p>
 <p>Please note <code>+=</code>. Using <code>=</code> would clear the previous content.</p>
 </div>
 <p>In general, a multi-nuclei target definition would look like this:</p>
-<div class="codehilite"><pre><span></span>target_content = [#protons 1] [#neutrons 1] [#nuclei 1]x
-target_content += [#protons 2] [#neutrons 2] [#nuclei 2]x
-target_content += [#protons 3] [#neutrons 3] [#nuclei 3]x
+<div class="codehilite"><pre><span></span>target_content = [#protons 1] [#neutrons 1] [#nuclei 1] x
+target_content += [#protons 2] [#neutrons 2] [#nuclei 2] x
+target_content += [#protons 3] [#neutrons 3] [#nuclei 3] x
 </pre></div>
 
 
@@ -1054,9 +1054,9 @@ target_content += [#protons 3] [#neutrons 3] [#nuclei 3]x
 <p class="admonition-title">Example</p>
 <p>To define <span>\(C_2H_6O\)</span> use the following code:</p>
 <div class="codehilite"><pre><span></span>target_type = 1
-target content = 6 6 2x
-target content += 1 0 6x
-target content += 8 8 1x
+target content = 6 6 2 x
+target content += 1 0 6 x
+target content += 8 8 1 x
 </pre></div>
 
 
@@ -1070,6 +1070,9 @@ To use one of those beams, one must use the following line:</p>
 
 
 <p>where <code>targetfile.txt</code> is the name of the file from <code>nuwro/data/target</code> directory.</p>
+<div class="admonition warning">
+<p>Please note that many predefined targets use slightly different syntax for composed targets. The syntax without space after <code>[#nuclei]</code> will not work on MacOS.</p>
+</div>
 <h2 id="interactions-settings">Interactions settings<a class="headerlink" href="#interactions-settings" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

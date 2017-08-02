@@ -182,7 +182,7 @@ In order to define a multi-nuclei target you need to set up `target_type = 1`.
 Instead of using `nucleus_p`, `nucleus_n` and other nucleus related parameters
 you should define your target with:
 
-    target_content = [#protons] [#neutrons] [#nuclei]x [binding energy] [Fermi momentum] [nucleus model]
+    target_content = [#protons] [#neutrons] [#nuclei] x [binding energy] [Fermi momentum] [nucleus target]
     
 where only first three arguments are required.
 
@@ -192,25 +192,25 @@ where only first three arguments are required.
     
 You may add as many nuclei as you want in the following way:
 
-    target_content += [#protons] [#neutrons] [#nuclei]x [binding energy] [Fermi momentum] [nucleus model]
+    target_content += [#protons] [#neutrons] [#nuclei] x [binding energy] [Fermi momentum] [nucleus target]
     
 !!! warning ""
     Please note `+=`. Using `=` would clear the previous content.
 
 In general, a multi-nuclei target definition would look like this:
 
-    target_content = [#protons 1] [#neutrons 1] [#nuclei 1]x
-    target_content += [#protons 2] [#neutrons 2] [#nuclei 2]x
-    target_content += [#protons 3] [#neutrons 3] [#nuclei 3]x
+    target_content = [#protons 1] [#neutrons 1] [#nuclei 1] x
+    target_content += [#protons 2] [#neutrons 2] [#nuclei 2] x
+    target_content += [#protons 3] [#neutrons 3] [#nuclei 3] x
 
 
 !!! note "Example"
      To define $C_2H_6O$ use the following code:
      
         target_type = 1
-        target content = 6 6 2x
-        target content += 1 0 6x
-        target content += 8 8 1x
+        target content = 6 6 2 x
+        target content += 1 0 6 x
+        target content += 8 8 1 x
 
 ### Predefined targets
 
@@ -223,6 +223,9 @@ To use one of those beams, one must use the following line:
 ```
 
 where `targetfile.txt` is the name of the file from `nuwro/data/target` directory.
+
+!!! warning ""
+    Please note that many predefined targets use slightly different syntax for composed targets. The syntax without space after `[#nuclei]` will not work on MacOS.
 
 ## Interactions settings
 

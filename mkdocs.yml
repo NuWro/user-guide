@@ -11,6 +11,8 @@ pages:
         - Basics: analyze-output/basics.md
         - Interactive mode: analyze-output/interactive.md
         - ROOT macros: analyze-output/macros.md
+
+    - Singularity: singularity.md
         
     - References: references.md
 
@@ -25,14 +27,15 @@ repo_name: 'NuWro'
 repo_url: 'https://github.com/nuwro/nuwro'
 
 # Theme
-theme: material
+theme:
+  name: 'material'
+  palette:
+    primary: 'blue grey'
+    accent: 'blue'
 
 #  Options
 extra:
   logo: 'img/LOGO-B.svg'
-  palette:
-    primary: 'blue grey'
-    accent: 'blue'
   social:
     - type: 'github'
       link: 'https://github.com/nuwro'

@@ -1,72 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
      <loc>https://nuwro.github.io/user-guide/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
      <loc>https://nuwro.github.io/user-guide/getting-started/installation/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
      <loc>https://nuwro.github.io/user-guide/getting-started/running/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
      <loc>https://nuwro.github.io/user-guide/getting-started/parameters/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
      <loc>https://nuwro.github.io/user-guide/analyze-output/basics/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
      <loc>https://nuwro.github.io/user-guide/analyze-output/interactive/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
      <loc>https://nuwro.github.io/user-guide/analyze-output/macros/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
     <url>
      <loc>https://nuwro.github.io/user-guide/singularity/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
     <url>
      <loc>https://nuwro.github.io/user-guide/references/</loc>
-     <lastmod>2017-12-15</lastmod>
+     <lastmod>2019-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
 </urlset>

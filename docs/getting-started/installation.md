@@ -66,6 +66,34 @@ cd root && ./configure --with-pythia6-libdir=lib
 ```bash
 make
 ```
+For ROOT version 6.16.00 you can try out the following [script](http://neutrino.ift.uni.wroc.pl/files/download-and-make-root6.16.00-with-pythia6.sh) :
+```bash
+#make temporary directory for downloading sources
+mkdir ~/install
+cd ~/install
+#dowload pythia6 sources 
+wget https://root.cern.ch/download/pythia6.tar.gz
+tar xzf pythia6.tar.gz
+cd pythia6
+#modify ./makePythia6.linux to use gfortran in place of g77
+sed -i 's/g77/gfortran/g' ./makePythia6.linux
+#make libPythia6.so
+bash ./makePythia6.linux
+#download ROOT sources
+cd ~/install
+wget https://root.cern/download/root_v6.16.00.source.tar.gz
+tar zxf root_v6.16.00.source.tar.gz
+#create build directory
+mkdir ~/root
+cd ~/root
+mkdir ~/root/lib
+#copy pythia6 library to build directory
+cp ~/install/pythia6/libPythia6.so  ~/root/lib
+#cmake ROOT with PYTHIA6 enabled
+cmake -DPYTHIA6_LIBRARY=~/root/lib/libPythia6.so -Dpyhia6=ON ~/install/root-6.16.00
+#make it
+make -j4
+```
 
 * set environmental variables:
 

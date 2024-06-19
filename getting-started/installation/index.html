@@ -1,44 +1,28 @@
 
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="NuWro Monte Carlo neutrino event generator documentation ">
-      
-      
-        <link rel="canonical" href="https://nuwro.github.io/user-guide/getting-started/installation/">
+        <meta name="description" content="NuWro Monte Carlo neutrino event generator documentation">
       
       
         <meta name="author" content="NuWro Collaboration">
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+        <link rel="canonical" href="https://nuwro.github.io/user-guide/getting-started/installation/">
       
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.language" content="en">
+        <link rel="prev" href="../..">
       
-        <meta name="lang:search.pipeline.stopwords" content="True">
       
-        <meta name="lang:search.pipeline.trimmer" content="True">
+        <link rel="next" href="../running/">
       
-        <meta name="lang:search.result.none" content="No matching documents">
       
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -46,189 +30,190 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
+      
+
+
+    
+    
+      
+    
+    
       
         
         
-        <meta name="theme-color" content="#546e7a">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
-    
-    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+
+    
     
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
-        
-      </defs>
-    </svg>
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#getting-nuwro" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://nuwro.github.io/user-guide" title="NuWro User Guide" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-nuwro" class="md-skip">
+          Skip to content
         </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              NuWro User Guide
-            </span>
-            <span class="md-header-nav__topic">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NuWro User Guide" class="md-header__button md-logo" aria-label="NuWro User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NuWro User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
               Installation
-            </span>
-          
+            
+          </span>
         </div>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
-        
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://github.com/nuwro/nuwro/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nuwro/nuwro" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     NuWro
   </div>
 </a>
-          </div>
-        </div>
-      
-    </div>
+      </div>
+    
   </nav>
+  
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
+      
       
         
+          
+        
       
-      
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://nuwro.github.io/user-guide" title="NuWro User Guide" class="md-nav__button md-logo">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NuWro User Guide" class="md-nav__button md-logo" aria-label="NuWro User Guide" data-md-component="logo">
       
-        <i class="md-icon"></i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
     </a>
     NuWro User Guide
   </label>
   
     <div class="md-nav__source">
-      
-
-
-  
-
-<a href="https://github.com/nuwro/nuwro/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
+      <a href="https://github.com/nuwro/nuwro" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     NuWro
   </div>
@@ -239,83 +224,133 @@
     
       
       
-      
-
-
-  <li class="md-nav__item">
-    <a href="../.." title="About" class="md-nav__link">
-      About
-    </a>
-  </li>
-
-    
-      
-      
-      
-
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
   
 
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      
+      
+  
+  
     
-    <label class="md-nav__link" for="nav-2">
-      Getting started
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Getting started
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Installation
-      </label>
-    
-    <a href="./" title="Installation" class="md-nav__link md-nav__link--active">
-      Installation
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-nuwro" title="Getting NuWro" class="md-nav__link">
-    Getting NuWro
+  <a href="#getting-nuwro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting NuWro
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies" title="Dependencies" class="md-nav__link">
-    Dependencies
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#building-root-with-pythia6-support" title="Building ROOT with PYTHIA6 support" class="md-nav__link">
-    Building ROOT with PYTHIA6 support
+  <a href="#building-root-with-pythia6-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building ROOT with PYTHIA6 support
+    </span>
   </a>
   
 </li>
@@ -326,141 +361,224 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-nuwro" title="Building NuWro" class="md-nav__link">
-    Building NuWro
+  <a href="#building-nuwro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building NuWro
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
-    Troubleshooting
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
   </a>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
 </nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../running/" title="Running NuWro" class="md-nav__link">
-      Running NuWro
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../parameters/" title="Parameters list" class="md-nav__link">
-      Parameters list
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running NuWro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parameters list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Analyze an output
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Analyze an output
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../analyze-output/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../analyze-output/interactive/" title="Interactive mode" class="md-nav__link">
-      Interactive mode
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../analyze-output/macros/" title="ROOT macros" class="md-nav__link">
-      ROOT macros
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+    </li>
+  
 
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analyze an output
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Analyze an output
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analyze-output/basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
 
-  <li class="md-nav__item">
-    <a href="../../singularity/" title="Singularity" class="md-nav__link">
-      Singularity
-    </a>
-  </li>
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analyze-output/interactive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analyze-output/macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROOT macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
       
       
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../singularity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Singularity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../references/" title="References" class="md-nav__link">
-      References
-    </a>
-  </li>
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -470,35 +588,47 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-nuwro" title="Getting NuWro" class="md-nav__link">
-    Getting NuWro
+  <a href="#getting-nuwro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting NuWro
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dependencies" title="Dependencies" class="md-nav__link">
-    Dependencies
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#building-root-with-pythia6-support" title="Building ROOT with PYTHIA6 support" class="md-nav__link">
-    Building ROOT with PYTHIA6 support
+  <a href="#building-root-with-pythia6-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building ROOT with PYTHIA6 support
+    </span>
   </a>
   
 </li>
@@ -509,22 +639,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-nuwro" title="Building NuWro" class="md-nav__link">
-    Building NuWro
+  <a href="#building-nuwro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building NuWro
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
-    Troubleshooting
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
   </a>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -534,40 +664,39 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <a href="https://github.com/nuwro/nuwro/edit/master/docs/getting-started/installation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
-                
-                
-                  <h1>Installation</h1>
-                
-                <h2 id="getting-nuwro">Getting NuWro<a class="headerlink" href="#getting-nuwro" title="Permanent link">&para;</a></h2>
-<p>To get the most up to date version of NuWro use:</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/NuWro/nuwro.git
-</pre></div>
+                  
 
+  
+  
+
+
+  <h1>Installation</h1>
+
+<h2 id="getting-nuwro">Getting NuWro<a class="headerlink" href="#getting-nuwro" title="Permanent link">&para;</a></h2>
+<p>To get the most up to date version of NuWro use:</p>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NuWro/nuwro.git
+</code></pre></div>
 
 <p>To get one of the stable releases use:</p>
-<div class="codehilite"><pre><span></span>git clone -b <span class="o">[</span>release tag<span class="o">]</span> https://github.com/NuWro/nuwro.git
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span><span class="o">[</span>release<span class="w"> </span>tag<span class="o">]</span><span class="w"> </span>https://github.com/NuWro/nuwro.git
+</code></pre></div>
 
 <p>e.g.</p>
-<div class="codehilite"><pre><span></span>git clone -b nuwro_17.01 https://github.com/NuWro/nuwro.git
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>nuwro_17.01<span class="w"> </span>https://github.com/NuWro/nuwro.git
+</code></pre></div>
 
 <div class="admonition fail">
 <p class="admonition-title">git version older than 1.7.10</p>
 <p><code>git clone -b [release tag]</code> will not work for git older than 1.7.10
 (but it is from May 2012 so you may consider updating your system).</p>
 <p>To get specific release you can use <code>git checkout tags/[release tag]</code>, e.g.</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/NuWro/nuwro.git
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/NuWro/nuwro.git
 git checkout tags/nuwro_17.01
-</pre></div>
-
+</code></pre></div>
 
 </div>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
@@ -582,10 +711,9 @@ git checkout tags/nuwro_17.01
 <li>download <a href="http://neutrino.ift.uni.wroc.pl/files/pythia6.tar.gz">PYTHIA6 source code</a></li>
 <li>build PYTHIA6 shared object (<code>libPythia6.so</code>):</li>
 </ul>
-<div class="codehilite"><pre><span></span>tar -xzvf pythia6.tar.gz
-<span class="nb">cd</span> pythia6 <span class="o">&amp;&amp;</span> ./makePythia6.linux
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>tar<span class="w"> </span>-xzvf<span class="w"> </span>pythia6.tar.gz
+<span class="nb">cd</span><span class="w"> </span>pythia6<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./makePythia6.linux
+</code></pre></div>
 
 <div class="admonition important">
 <p>It requires <code>gfortran</code> Fortran compiler.</p>
@@ -593,96 +721,92 @@ git checkout tags/nuwro_17.01
 <ul>
 <li>copy <code>libPythia6.so</code> to <code>root/lib</code> folder:</li>
 </ul>
-<div class="codehilite"><pre><span></span>tar -zxvf root_v*.source.tar.gz
-mkdir root/lib
-cp pythia6/libPythia6.so root/lib
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>tar<span class="w"> </span>-zxvf<span class="w"> </span>root_v*.source.tar.gz
+mkdir<span class="w"> </span>root/lib
+cp<span class="w"> </span>pythia6/libPythia6.so<span class="w"> </span>root/lib
+</code></pre></div>
 
 <ul>
 <li>configure ROOT:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> root <span class="o">&amp;&amp;</span> ./configure --with-pythia6-libdir<span class="o">=</span>lib
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>root<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./configure<span class="w"> </span>--with-pythia6-libdir<span class="o">=</span>lib
+</code></pre></div>
 
 <ul>
 <li>and make it:</li>
 </ul>
-<div class="codehilite"><pre><span></span>make
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>make
+</code></pre></div>
 
 <p>For ROOT version 6.16.00 you can try out the following <a href="http://neutrino.ift.uni.wroc.pl/files/download-and-make-root6.16.00-with-pythia6.sh">script</a> :</p>
-<div class="codehilite"><pre><span></span><span class="c1">#make temporary directory for downloading sources</span>
-mkdir ~/install
-<span class="nb">cd</span> ~/install
+<div class="codehilite"><pre><span></span><code><span class="c1">#make temporary directory for downloading sources</span>
+mkdir<span class="w"> </span>~/install
+<span class="nb">cd</span><span class="w"> </span>~/install
 <span class="c1">#dowload pythia6 sources </span>
-wget https://root.cern.ch/download/pythia6.tar.gz
-tar xzf pythia6.tar.gz
-<span class="nb">cd</span> pythia6
+wget<span class="w"> </span>https://root.cern.ch/download/pythia6.tar.gz
+tar<span class="w"> </span>xzf<span class="w"> </span>pythia6.tar.gz
+<span class="nb">cd</span><span class="w"> </span>pythia6
 <span class="c1">#modify ./makePythia6.linux to use gfortran in place of g77</span>
-sed -i <span class="s1">&#39;s/g77/gfortran/g&#39;</span> ./makePythia6.linux
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/g77/gfortran/g&#39;</span><span class="w"> </span>./makePythia6.linux
 <span class="c1">#make libPythia6.so</span>
-bash ./makePythia6.linux
+bash<span class="w"> </span>./makePythia6.linux
 <span class="c1">#download ROOT sources</span>
-<span class="nb">cd</span> ~/install
-wget https://root.cern/download/root_v6.16.00.source.tar.gz
-tar zxf root_v6.16.00.source.tar.gz
+<span class="nb">cd</span><span class="w"> </span>~/install
+wget<span class="w"> </span>https://root.cern/download/root_v6.16.00.source.tar.gz
+tar<span class="w"> </span>zxf<span class="w"> </span>root_v6.16.00.source.tar.gz
 <span class="c1">#create build directory</span>
-mkdir ~/root
-<span class="nb">cd</span> ~/root
-mkdir ~/root/lib
+mkdir<span class="w"> </span>~/root
+<span class="nb">cd</span><span class="w"> </span>~/root
+mkdir<span class="w"> </span>~/root/lib
 <span class="c1">#copy pythia6 library to build directory</span>
-cp ~/install/pythia6/libPythia6.so  ~/root/lib
+cp<span class="w"> </span>~/install/pythia6/libPythia6.so<span class="w">  </span>~/root/lib
 <span class="c1">#cmake ROOT with PYTHIA6 enabled</span>
-cmake -DPYTHIA6_LIBRARY<span class="o">=</span>~/root/lib/libPythia6.so -Dpyhia6<span class="o">=</span>ON ~/install/root-6.16.00
+cmake<span class="w"> </span>-DPYTHIA6_LIBRARY<span class="o">=</span>~/root/lib/libPythia6.so<span class="w"> </span>-Dpyhia6<span class="o">=</span>ON<span class="w"> </span>~/install/root-6.16.00
 <span class="c1">#make it</span>
-make -j4
-</pre></div>
-
+make<span class="w"> </span>-j4
+</code></pre></div>
 
 <ul>
 <li>set environmental variables:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">ROOTSYS</span><span class="o">=(</span>path to root directory<span class="o">)</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ROOTSYS</span>/bin
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:<span class="nv">$ROOTSYS</span>/lib
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ROOTSYS</span><span class="o">=(</span>path<span class="w"> </span>to<span class="w"> </span>root<span class="w"> </span>directory<span class="o">)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ROOTSYS</span>/bin
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:<span class="nv">$ROOTSYS</span>/lib
+</code></pre></div>
 
 <p>you can use the script provided by ROOT (<code>bin/this_root.sh</code>) that includes the commands and run <code>source bin/this_root.sh</code> every time you start a terminal or add the above lines to either <code>~/.bashrc</code> or <code>~/.bash_profile</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">macOS support</p>
-<p>NuWro has been tested to work properly on the following configuration</p>
-<div class="codehilite"><pre><span></span>x86_64-apple-darwin15.6.0
+<p>NuWro has been tested to work properly on the following configurations</p>
+<div class="codehilite"><pre><span></span><code>x86_64-apple-darwin15.6.0
 clang-800.0.42.1
 root-5.34.36
-</pre></div>
 
+arm64-apple-darwin23.2.0
+clang-1500.1.0.2.5
+root-6.30.04
+</code></pre></div>
 
 <p>While installing on macOS one should remember about the following differences:</p>
 <ul>
 <li>PYTHIA6 should be compiled using the <code>./makePythia6.macosx64</code> command,</li>
 <li>the shared object of PYTHIA6 is called <code>libPythia6.dylib</code>,</li>
-<li>the bash profile file is called <code>~/.profile</code>.</li>
+<li>the bash profile file is called <code>~/.profile</code> or <code>~/.zshrc</code>.</li>
 </ul>
 <p>Note that the following problems are known to emerge:</p>
 <ul>
-<li>NuWro has not yet been configured to work with ROOT6 under macOS,</li>
 <li>
 <p>while installing <code>gfortran</code> via Homebrew the <code>libgfortran.dylib</code> file is not properly linked for the C compiler, one should export the variable <code>LIBRARY_PATH</code> with the path to the lib file.<br>
-e.g. put into <code>~/.profile</code> the following line (it will depend on the <code>gfortran</code> installation)</p>
+e.g. put into <code>~/.profile</code> or <code>~/.zshrc</code> the following line (it will depend on the <code>gfortran</code> installation)</p>
 <p><code>export LIBRARY_PATH=/usr/local/lib/gcc/6</code></p>
 </li>
 </ul>
 </div>
 <h2 id="building-nuwro">Building NuWro<a class="headerlink" href="#building-nuwro" title="Permanent link">&para;</a></h2>
 <p>Once you have ROOT installed with PYTHIA6 support just make NuWro:</p>
-<div class="codehilite"><pre><span></span>tar -zxvf nuwro-*.tar.gz
-<span class="nb">cd</span> nuwro <span class="o">&amp;&amp;</span> make
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>tar<span class="w"> </span>-zxvf<span class="w"> </span>nuwro-*.tar.gz
+<span class="nb">cd</span><span class="w"> </span>nuwro<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make
+</code></pre></div>
 
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
@@ -691,90 +815,75 @@ and getting errors about undefined references to <em>std::__cxx11</em>
 (described <a href="https://gcc.gnu.org/onlinedocs/gcc-5.2.0/libstdc++/manual/manual/using_dual_abi.html">here</a>),
 you can add the following flag:</li>
 </ul>
-<div class="codehilite"><pre><span></span>-D_GLIBCXX_USE_CXX11_ABI<span class="o">=</span><span class="m">0</span>
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>-D_GLIBCXX_USE_CXX11_ABI<span class="o">=</span><span class="m">0</span>
+</code></pre></div>
 
 <p>to <em>CFLAGS</em> in proper <em>[root]/config/Makefile.[system]</em> file.</p>
-                
-                  
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../.." title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                About
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../running/" title="Running NuWro" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Running NuWro
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
-  <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+        <div class="md-social">
+  
     
-      <a href="https://github.com/nuwro" class="md-footer-social__link fa fa-github"></a>
     
-  </div>
-
+    
+    
+      
+      
+    
+    <a href="https://github.com/nuwro" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
-      
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

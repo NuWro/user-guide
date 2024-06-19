@@ -28,15 +28,18 @@ Currently involved in the project:
 
 <ul>
     <li>Jan Sobczyk</li>
-    <li>Cezary Juszczak</li>
-    <li><a href=http://www.ift.uni.wroc.pl/~tgolan>Tomasz Golan</a></li>
-    <li><a href=http://www.ift.uni.wroc.pl/~kniewczas>Kajetan Niewczas</a></li>
+    <li>Artur Ankowski</li>
     <li><a href=http://www.ift.uni.wroc.pl/~kgraczyk>Krzysztof Graczyk</a></li>
+    <li>Cezary Juszczak</li>
+    <li><a href=http://www.ift.uni.wroc.pl/~kniewczas>Kajetan Niewczas</a></li>
+    <li>Rwik Banerjee</li>
+    <li>Hemant Prasad</li>
 </ul>
 
 Former members:
 
 <ul>
+    <li><a href=http://www.ift.uni.wroc.pl/~tgolan>Tomasz Golan</a></li>
     <li><a href=http://www.lancaster.ac.uk/physics/about-us/people/jaroslaw-nowak>Jarosław Nowak</a></li>
     <li>Jakub Żmuda</li>
 </ul>
@@ -48,10 +51,14 @@ Significant contribution:
 
 <ul>
     <li>Artur Kobyliński</li>
+    <li>Alexis Nikolakopoulos</li>
     <li>Maciej Tabiszewski</li>
+    <li>Christopher Thorpe</li>
     <li>Paweł Przewłocki</li>
     <li>Luke Pickering</li>
     <li>Patrick Stowell</li>
+    <li>Qiyu Yan</li>
+    <li>Dmitry Zhuridov</li>
 </ul>
 
 </div>

@@ -18,7 +18,7 @@ nav:
 
 # Project information
 site_name: 'NuWro User Guide'
-site_description: 'NuWro Monte Carlo neutrino event generator documentation '
+site_description: 'NuWro Monte Carlo neutrino event generator documentation'
 site_author: 'NuWro Collaboration'
 site_url: 'https://nuwro.github.io/user-guide'
 
@@ -37,7 +37,7 @@ theme:
 extra:
   logo: 'img/LOGO-B.svg'
   social:
-    - type: 'github'
+    - icon: 'github'
       link: 'https://github.com/nuwro'
 
 # Extensions

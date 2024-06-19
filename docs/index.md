@@ -52,11 +52,11 @@ Significant contribution:
 <ul>
     <li>Artur Kobyliński</li>
     <li>Alexis Nikolakopoulos</li>
-    <li>Maciej Tabiszewski</li>
-    <li>Christopher Thorpe</li>
     <li>Paweł Przewłocki</li>
     <li>Luke Pickering</li>
     <li>Patrick Stowell</li>
+    <li>Maciej Tabiszewski</li>
+    <li>Christopher Thorpe</li>
     <li>Qiyu Yan</li>
     <li>Dmitry Zhuridov</li>
 </ul>

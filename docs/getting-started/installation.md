@@ -106,23 +106,26 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib
 you can use the script provided by ROOT (`bin/this_root.sh`) that includes the commands and run `source bin/this_root.sh` every time you start a terminal or add the above lines to either `~/.bashrc` or `~/.bash_profile`.
 
 !!! note "macOS support"
-    NuWro has been tested to work properly on the following configuration
+    NuWro has been tested to work properly on the following configurations
 
         x86_64-apple-darwin15.6.0
         clang-800.0.42.1
         root-5.34.36
 
+        arm64-apple-darwin23.2.0
+        clang-1500.1.0.2.5
+        root-6.30.04
+
     While installing on macOS one should remember about the following differences:
 
     * PYTHIA6 should be compiled using the `./makePythia6.macosx64` command,
     * the shared object of PYTHIA6 is called `libPythia6.dylib`,
-    * the bash profile file is called `~/.profile`.
+    * the bash profile file is called `~/.profile` or `~/.zshrc`.
 
     Note that the following problems are known to emerge:
 
-    * NuWro has not yet been configured to work with ROOT6 under macOS,
     * while installing `gfortran` via Homebrew the `libgfortran.dylib` file is not properly linked for the C compiler, one should export the variable `LIBRARY_PATH` with the path to the lib file.<br>
-    e.g. put into `~/.profile` the following line (it will depend on the `gfortran` installation)
+    e.g. put into `~/.profile` or `~/.zshrc` the following line (it will depend on the `gfortran` installation)
 
         `export LIBRARY_PATH=/usr/local/lib/gcc/6`
 

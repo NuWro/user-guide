@@ -37,7 +37,7 @@ theme:
 extra:
   logo: 'img/LOGO-B.svg'
   social:
-    - icon: 'github'
+    - icon: 'fontawesome/brands/github-alt'
       link: 'https://github.com/nuwro'
 
 # Extensions

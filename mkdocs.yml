@@ -1,5 +1,5 @@
 # Website structure
-pages:
+nav:
     - About: index.md
 
     - Getting started:
